@@ -33,7 +33,9 @@ Data from landfire.gov
 
 ## Regional look
 
-Kelly inserts NE-Wide map
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("images/NE_US_Layout2.jpg")
+```
 
 
 ## Minnesota
@@ -86,3 +88,4 @@ fireChart
 
 ```
 
+## new slide
