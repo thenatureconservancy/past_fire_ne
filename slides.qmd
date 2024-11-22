@@ -88,4 +88,31 @@ fireChart
 
 ```
 
-## new slide
+## Fire today
+
+* map of fires over the last 5-10 years, maybe from LANDFIRE dist data or MTBS
+* acres of historical vs. current
+
+consider mapping MFRI hist vs current for the 1-10 year MFRI areas
+
+## Ecosystem story---consider Tower Lake Fire
+
+* some sort of attractive ecosystem diagram
+* what happens without fire
+* who cares?
+
+## Where to practice-public
+
+* zoom into some NF
+* acres then vs. now
+
+
+## Where to practice-private lands
+
+* NRCS perspective
+
+
+
+
+
+
