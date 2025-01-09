@@ -6,13 +6,27 @@ format:
     theme: night
 ---
 
-## So what 
+## So what-trees
 
-<br>
-<br>
-<br>
+Insert tree collage with photos and bullets:
 
-Indigenous peoples managed the lands for thousands of years
+* Oaks at least 20 species (Stein et al., 2017)
+* Pines at least 10 species (Earle et al. 2023)
+* Hickories at least 4
+
+ALSO LOOK AT Nowacki VanGundy papers
+
+This is a small sample of the plants that thrive with fire in the NE.
+
+## So what-Indigenous burning {.center}
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("images/tulowiecki_2024.png")
+```
+
+
+Map from Tulowiecki 2024, witness tree classification from Paciorek et al., 2016
 
 ##  {.center}
 
