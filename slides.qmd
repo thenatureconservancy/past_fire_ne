@@ -11,13 +11,31 @@ title-slide-attributes:
   data-background-position: 2% 98%, center
 ---
 
-## So what 
+## So what-trees
 
-<br>
-<br>
-<br>
+Insert tree collage with photos and bullets:
 
+<<<<<<< HEAD
 It's no secret, for thousands of years our Indigenous communities have understood and put into practice the introduction and management of fire on the landscape as a way to actively manage ecosystems.  
+=======
+* Oaks at least 20 species (Stein et al., 2017)
+* Pines at least 10 species (Earle et al. 2023)
+* Hickories at least 4
+
+ALSO LOOK AT Nowacki VanGundy papers
+
+This is a small sample of the plants that thrive with fire in the NE.
+
+## So what-Indigenous burning {.center}
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("images/tulowiecki_2024.png")
+```
+
+
+Map from Tulowiecki 2024, witness tree classification from Paciorek et al., 2016
+>>>>>>> 6d58df3d9512b328b262b749902a9b6f8c4159d4
 
 ##  So what
 
@@ -34,7 +52,9 @@ Data from landfire.gov
 
 ## Regional look
 
-Kelly inserts NE-Wide map
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("images/NE_US_Layout2.jpg")
+```
 
 
 ## Minnesota
@@ -99,4 +119,32 @@ fireChart
 
 
 ```
+
+## Fire today
+
+* map of fires over the last 5-10 years, maybe from LANDFIRE dist data or MTBS
+* acres of historical vs. current
+
+consider mapping MFRI hist vs current for the 1-10 year MFRI areas
+
+## Ecosystem story---consider Tower Lake Fire
+
+* some sort of attractive ecosystem diagram
+* what happens without fire
+* who cares?
+
+## Where to practice-public
+
+* zoom into some NF
+* acres then vs. now
+
+
+## Where to practice-private lands
+
+* NRCS perspective
+
+
+
+
+
 
