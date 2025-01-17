@@ -4,6 +4,11 @@ author: "Kelly Ahern, Silas Pickhardt and Randy Swaty"
 format: 
   revealjs:
     theme: night
+css: style.css
+title-slide-attributes: 
+  data-background-image: "images/banner_2021.jpg"
+  data-background-size: 2000px, cover
+  data-background-position: 2% 98%, center
 ---
 
 ## So what 
@@ -12,15 +17,11 @@ format:
 <br>
 <br>
 
-Indigenous peoples managed the lands for thousands of years
+It's no secret, for thousands of years our Indigenous communities have understood and put into practice the introduction and management of fire on the landscape as a way to actively manage ecosystems.  
 
-##  {.center}
+##  So what
 
-
-```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
-knitr::include_graphics("images/nytimes_ne_wildfire.jpg")
-```
-
+RAD screenshot infomation
 
 ## Our data
 
@@ -41,6 +42,19 @@ Kelly inserts NE-Wide map
 * Minnesota is cool
 * Minnesota had fire
 * Arrowhead is interesting
+
+*Or simply insert map*
+
+## Western Vermont
+
+* Blah
+
+*Or simply insert map*
+
+## Monogahela NF
+
+* Monogahela NF is cool
+BLAH
 
 *Or simply insert map*
 
