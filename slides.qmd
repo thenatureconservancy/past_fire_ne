@@ -57,11 +57,13 @@ knitr::include_graphics("images/NE_US_Layout2.jpg")
 
 *Or simply insert map*
 
-## Assesing Change in Fire
+## Change in Fire: The Methods
 ::::::{.incremental}
 ::::: columns 
 ::: column 
--   Binning MFRI_All
+Historical: 
+
+-  Binning BPS MFRI_all
     -   0-30 Years = Frequent
     -   30-200 Years = Intermediate
     -   200 + Years = Rare
@@ -70,21 +72,23 @@ knitr::include_graphics("images/NE_US_Layout2.jpg")
 
 
 ::: column
--   Estimate Expected for EVT
+Current:
+
+-  Expected FRI of EVT
     -   NatureServe Descriptions
     -   Educated Guessing
     
 :::
 ::::
 ::::::
-## Result- Historical
+## Mapping- Historical
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
 knitr::include_graphics("images/MN_Historical.jpg")
 ```
 
 
-## Result- Current
+## Mapping- Current
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
 knitr::include_graphics("images/MN_today.jpg")
@@ -154,7 +158,7 @@ ggplot(evt_mn1, aes(x=Percentage,y=Freq, fill = as.factor(Freq)))+
   theme(legend.position = "none") 
 ```
 
-## Results- "Sans-Development"
+## Results- Manageable landscape 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
 evt_noag <- read_csv("~/CDL/NEFire/evt_noag.csv")
 
@@ -179,3 +183,50 @@ ggplot(evt_noag, aes(x=Percentage,y=Freq, fill = as.factor(Freq)))+
   theme_bw()+
   theme(legend.position = "none") 
 ```
+
+## The change
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
+##Showing change
+
+##historical fire regime group percentage
+
+bps_mn2<- bps_mn1 %>%    
+  mutate(Percentage = Acres / sum(Acres) * 100)  
+
+##current fire regime group percentage
+
+evt_noag1<- evt_noag %>%
+  mutate(Percentage = Acres / sum(Acres) * 100) 
+
+## make new df with changing percentages
+
+bps_frgpct<-bps_mn2%>%
+  group_by(SI_FRG) %>%
+  summarize(hist_percent = sum(Percentage, na.rm = TRUE),)%>%
+  rename(Freq = SI_FRG)
+
+evt_frgpct<-evt_noag1%>%
+  group_by(Freq) %>%
+  summarize(cur_percent = sum(Percentage, na.rm = TRUE),)
+
+frg_chang<-left_join(bps_frgpct,evt_frgpct, by="Freq")
+
+ggplot(frg_chang, aes(
+    x = hist_percent, xend = cur_percent, 
+    y = Freq,
+    color = Freq)) +
+  geom_segment(
+    arrow = arrow(angle = 30, length = unit(0.5, 'cm')),
+    linewidth = 2) +
+  labs(
+    x = 'Percent', 
+    y = element_blank(),
+    title = 'Changes in Fire Frequency',
+    subtitle = "Minesota: Historical to ~2023"
+  ) +
+  scale_color_manual(
+    values = custom_colors) +
+  theme_bw(base_size = 12) +
+  theme(legend.position = "none")
+```
+
