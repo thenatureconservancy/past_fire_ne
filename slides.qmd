@@ -11,24 +11,19 @@ title-slide-attributes:
   data-background-position: 2% 98%, center
 ---
 
-
-## So what-Indigenous burning 
-
+## So what-Indigenous burning
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
 knitr::include_graphics("images/tulowiecki_2024.png")
 ```
- 
 
 Map from Tulowiecki 2024, witness tree classification from Paciorek et al., 2016
 
-
-##  So what
+## So what
 
 RAD screenshot information
 
 ## Our data
-
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
 knitr::include_graphics("images/side_by_side.jpg")
@@ -42,95 +37,56 @@ Data from landfire.gov
 knitr::include_graphics("images/NE_US_Layout2.jpg")
 ```
 
-
 ## Minnesota
 
-* Minnesota is cool
-* Minnesota had fire
-* Arrowhead is interesting
+-   Minnesota is cool
+-   Minnesota had fire
+-   Arrowhead is interesting
 
 *Or simply insert map*
 
 ## Western Vermont
 
-* Blah
+-   Blah
 
 *Or simply insert map*
 
 ## Monogahela NF
 
-* Monogahela NF is cool
-BLAH
+-   Monogahela NF is cool BLAH
 
 *Or simply insert map*
 
-## Silas inserts a chart
+## Assesing Change in Fire
+::::: columns
+::: column 
+-   Binning MFRI_All
+    -   0-30 Years = Frequent
+    -   30-200 Years = Intermediate
+    -   200 + Years = Rare
+    
+:::
 
+::: column
+-   Estimate Expected for EVT
+    -   NatureServe Descriptions
+    -   Educated Guessing
+    
+:::
+::::
+*Nowacki and Abrams (2008)*
 
-```{r fire bar, echo=FALSE, message=FALSE, warning=FALSE, , out.width="90%", fig.align='center'}
+## Result- Historical
 
-library(tidyverse)
-library(scales)
-library(stringr)
-
-bps_data <- read.csv("data/bps_aoi_attributes.csv")
-
-
-# read bps attribute table .csv and summarize
-annualFire <- bps_data %>%
-  mutate(annual_fire_acres = ((1/FRI_ALLFIR)*ACRES)) %>%
-  filter(BPS_NAME != 'Open Water') %>%
-  group_by(BPS_NAME) %>%
-  summarize(acres = sum(annual_fire_acres)) %>%
-  arrange(desc(acres)) %>%
-  top_n(n = 5, wt = acres)
-
-# plot
-fireChart <- 
-  ggplot(data = annualFire, aes(x = BPS_NAME, y = acres)) +
-  geom_bar(stat = "identity") +
-  labs(
-    title = "Cumulative estimates of all fire types prior to pre-European colonization",
-    caption = "Data from landfire.gov; Chart © Randy Swaty",
-    x = "",
-    y = "Acres") +
-  scale_x_discrete(limits = rev(annualFire$BPS_NAME),
-                   labels = function(x) str_wrap(x, width = 18)) +
-  scale_y_continuous(name = 'Acres', labels = comma) +
-  coord_flip() +
-  theme_bw(base_size = 11) +
-  theme(plot.margin = margin(10, 30, 0, 0))
-
-fireChart
-
-
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("images/MN_Historical.jpg")
 ```
 
-## Fire today
 
-* map of fires over the last 5-10 years, maybe from LANDFIRE dist data or MTBS
-* acres of historical vs. current
+## Result- Current
 
-consider mapping MFRI hist vs current for the 1-10 year MFRI areas
-
-## Ecosystem story---consider Tower Lake Fire
-
-* some sort of attractive ecosystem diagram
-* what happens without fire
-* who cares?
-
-## Where to practice-public
-
-* zoom into some NF
-* acres then vs. now
-
-
-## Where to practice-private lands
-
-* NRCS perspective
-
-
-
-
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("images/MN_today.jpg")
+```
 
 
