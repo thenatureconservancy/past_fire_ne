@@ -1,0 +1,38 @@
+---
+title: "Beyond the Burn: a presentation at Ore Dock Brewery"
+author: "Randy Swaty, Damon Panek, Kelly Ahern and Randy Swaty"
+format: 
+  html:
+    toc: true
+  
+theme: flatly
+---
+
+
+## What?
+On February 13, 2025, 7-8pm ET, Randy, Damon, Kelly and Silas will deliver a presentation titled "Beyond the Burn: Fire's Beneficial Role in NOrtheast Landscapes and Human Lives" followed by a discussion at the Ore Dock Brewing Company.
+
+## 43,694,512 
+
+That is how many acres we calculated burned every year on average in the northeastern United States prior to European colonization.  This is roughly 10% every year-and that is a conservative estimate.  Many of those acres were burned by Indigenous peoples, managing the land for dozens of reasons.  For example, tribes would burn areas as a way to 'herd' bison to the east coast for trade.  They did not use helicopters, border collies or four-wheelers.  They managed the vegetation in a way that moved the bison.  Across vast areas.  And that is just one of many uses of fire for tribes. Luckily, tribes are still managing lands today, and are willing to share knowledge with us. 
+
+
+**Average number of years between fires historically. Yellows = 1-5 years, purples = hundreds of years**
+
+![](images/ne_fri_quick.jpg){width="100%"}
+
+
+## 119,283
+This is the number of acres burned for the same area in 2023.  Many of the acres have been converted to agricultural or urban land uses, and we are really good at putting out fires.  This is not to mention what happened to the tribes of the area who were managing for thousands of years.  
+
+## So what
+
+All of our pines, all of our hickories, most of our oaks and many many more species are adapted to fire.  Think blueberries for one, yum!  Without fire the ecosystems that are dominated by these and other species can decline.  Those species can be replaced by others.  Some areas may become less resilient to climate change.  Without fire tribal members have lost foundational part of their culture-some would argue we all have.
+
+And-while we will cover the benefits of fire, we know that the wrong fire in the wrong places can have catestrophic impacts on people, and things people value.  Some areas become more prone to big fires when they no longer have the frequent 'low-severity' fires they used to.  Those fires 'cleaned' the ecosystem of fuels.  We see this out west annually, and predict this might happen more in the northeast over time. 
+
+## What we'll cover
+
+In our presentation, Randy Swaty will introduce the topic and the presenters.  Damon will start and end the circle, addressing the "So what?" question with stories of Indigenous burning.  Kelly Ahern will show us where the fires were, and explore some case studies.  Silas Pickhard will dig into the ecology, and current patterns.  We'll all look forward to your questions.
+
+
