@@ -57,10 +57,23 @@ knitr::include_graphics("images/NE_US_Layout2.jpg")
 
 *Or simply insert map*
 
+## Change in Fire 
+:::{.incremental}
+- Easy and relatively quick method to:
+  - Visualize broad fire patterns from the past
+  - Visualize expected fire patterns today
+  - Swiftly compare and contrast these two standards
+  - Draw conclusions about how the role fire has shifted  
+  
+:::  
+       
 ## Change in Fire: The Methods
 ::::::{.incremental}
+Assigning "Fire Frequency Groups"
+
 ::::: columns 
 ::: column 
+
 Historical: 
 
 -  Binning BPS MFRI_all
@@ -84,14 +97,14 @@ Current:
 ## Mapping- Historical
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
-knitr::include_graphics("images/MN_Historical.jpg")
+knitr::include_graphics("images/MN_Historical2.jpg")
 ```
 
 
 ## Mapping- Current
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
-knitr::include_graphics("images/MN_today.jpg")
+knitr::include_graphics("images/MN_today2.jpg")
 ```
 
 ## Results- Historical
@@ -117,13 +130,13 @@ bps_mn1$SI_FRG <- factor(bps_mn1$SI_FRG, levels = c("Rare","Intermediate","Frequ
 
 
 ##give colors to bar
-custom_colors <- c("Frequent" = "red", "Rare" = "skyblue2", "Intermediate" = "green4")
+custom_colors <- c("Frequent" = "orange", "Rare" = "skyblue2", "Intermediate" = "darkgreen")
 
 ggplot(bps_mn1, aes(x=Percentage,y=SI_FRG, fill = as.factor(SI_FRG)))+
   geom_bar(stat= "identity")+
   scale_fill_manual(values = custom_colors)+
-  labs(title = "Historical Fire Frequency", caption = "Derived From LANDFIRE BpS Data")+
-  ylab("Frequency Group")+
+  labs(title = "Historical Fire Frequency", subtitle = "Percent Burned Per Year by Frequency Group",caption = "Derived From LANDFIRE BpS Data")+
+  ylab("")+
   scale_x_continuous(labels = label_comma())+
   theme_bw()+
   theme(legend.position = "none")
@@ -146,13 +159,13 @@ evt_mn1<-evt_mn%>%
 evt_mn1$Freq <- factor(evt_mn1$Freq, levels = c("Rare","Intermediate","Frequent"))
 
 ##give colors to bar
-custom_colors <- c("Frequent" = "red", "Rare" = "skyblue2", "Intermediate" = "green4")
+custom_colors <- c("Frequent" = "orange", "Rare" = "skyblue2", "Intermediate" = "darkgreen")
 
 ggplot(evt_mn1, aes(x=Percentage,y=Freq, fill = as.factor(Freq)))+
   geom_bar(stat= "identity")+
   scale_fill_manual(values = custom_colors)+
-  labs(title = "Current Expected Fire Frequency", caption = "Derived From LANDFIRE EVT Data")+
-  ylab("Frequency Group")+
+  labs(title = "Current Expected Fire Frequency",subtitle = "Expected Percent Burned Per Year by Frequency Group", caption = "Derived From LANDFIRE EVT Data")+
+  ylab("")+
   scale_x_continuous(labels = label_comma())+
   theme_bw()+
   theme(legend.position = "none") 
@@ -172,13 +185,13 @@ evt_noag$Freq <- factor(evt_noag$Freq, levels = c("Rare","Intermediate","Frequen
 
 
 ##give colors to bar
-custom_colors <- c("Frequent" = "red", "Rare" = "skyblue2", "Intermediate" = "green4")
+custom_colors <- c("Frequent" = "orange", "Rare" = "skyblue2", "Intermediate" = "darkgreen")
 
 ggplot(evt_noag, aes(x=Percentage,y=Freq, fill = as.factor(Freq)))+
   geom_bar(stat= "identity")+
   scale_fill_manual(values = custom_colors)+
-  labs(title = "Current Expected Fire Frequency", caption = "Derived From LANDFIRE EVT Data")+
-  ylab("Frequency Group")+
+  labs(title = "Current Expected Fire Frequency",subtitle = "Expected Percent Burned When Removing Development and Agriculture", caption = "Derived From LANDFIRE EVT Data")+
+  ylab("")+
   scale_x_continuous(labels = label_comma())+
   theme_bw()+
   theme(legend.position = "none") 
@@ -217,16 +230,27 @@ ggplot(frg_chang, aes(
     color = Freq)) +
   geom_segment(
     arrow = arrow(angle = 30, length = unit(0.5, 'cm')),
-    linewidth = 2) +
+    linewidth = 3) +
   labs(
     x = 'Percent', 
     y = element_blank(),
     title = 'Changes in Fire Frequency',
-    subtitle = "Minesota: Historical to ~2023"
+    subtitle = "Minnesota: Historical to ~2023"
   ) +
   scale_color_manual(
     values = custom_colors) +
   theme_bw(base_size = 12) +
   theme(legend.position = "none")
 ```
+
+## Change in Fire- Summary
+:::{.incremental}
+- Most of Minnesota used to burn frequently
+- Now it doesn't but...
+    - The need for frequent fire still exists  
+- Able to visualize these trends using this method
+
+:::
+ 
+
 
