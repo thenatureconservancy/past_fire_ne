@@ -135,7 +135,7 @@ custom_colors <- c("Frequent" = "orange", "Rare" = "skyblue2", "Intermediate" = 
 ggplot(bps_mn1, aes(x=Percentage,y=SI_FRG, fill = as.factor(SI_FRG)))+
   geom_bar(stat= "identity")+
   scale_fill_manual(values = custom_colors)+
-  labs(title = "Historical Fire Frequency", subtitle = "Percent Burned Per Year by Frequency Group",caption = "Derived From LANDFIRE BpS Data")+
+  labs(title = "Historical Fire Frequency", subtitle = "Percent of Landscape in Each Frequency Group",caption = "Derived From LANDFIRE BpS Data")+
   ylab("")+
   scale_x_continuous(labels = label_comma())+
   theme_bw()+
@@ -164,7 +164,7 @@ custom_colors <- c("Frequent" = "orange", "Rare" = "skyblue2", "Intermediate" = 
 ggplot(evt_mn1, aes(x=Percentage,y=Freq, fill = as.factor(Freq)))+
   geom_bar(stat= "identity")+
   scale_fill_manual(values = custom_colors)+
-  labs(title = "Current Expected Fire Frequency",subtitle = "Expected Percent Burned Per Year by Frequency Group", caption = "Derived From LANDFIRE EVT Data")+
+  labs(title = "Current Expected Fire Frequency",subtitle = "Expected Percent of Landscape in Each Frequency Group", caption = "Derived From LANDFIRE EVT Data")+
   ylab("")+
   scale_x_continuous(labels = label_comma())+
   theme_bw()+
@@ -190,7 +190,7 @@ custom_colors <- c("Frequent" = "orange", "Rare" = "skyblue2", "Intermediate" = 
 ggplot(evt_noag, aes(x=Percentage,y=Freq, fill = as.factor(Freq)))+
   geom_bar(stat= "identity")+
   scale_fill_manual(values = custom_colors)+
-  labs(title = "Current Expected Fire Frequency",subtitle = "Expected Percent Burned When Removing Development and Agriculture", caption = "Derived From LANDFIRE EVT Data")+
+  labs(title = "Current Expected Fire Frequency",subtitle = "Expected When Removing Development and Agriculture", caption = "Derived From LANDFIRE EVT Data")+
   ylab("")+
   scale_x_continuous(labels = label_comma())+
   theme_bw()+
