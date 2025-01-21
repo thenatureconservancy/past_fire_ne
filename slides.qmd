@@ -27,11 +27,10 @@ Map from Tulowiecki 2024, witness tree classification from Paciorek et al., 2016
 
 RAD screenshot information
 
-## Our data
-
+## From Biophysical Settings to Fire Return Interval
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
-knitr::include_graphics("images/side_by_side.jpg")
+knitr::include_graphics("images/bps_to_fri.png")
 ```
 
 Data from landfire.gov
@@ -42,27 +41,20 @@ Data from landfire.gov
 knitr::include_graphics("images/NE_US_Layout2.jpg")
 ```
 
+## Western Vermont
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("images/VThistoric.png")
+
+## Monongahela National Forest
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("images/MNFhistoric.png")
 
 ## Minnesota
 
-* Minnesota is cool
-* Minnesota had fire
-* Arrowhead is interesting
-
-*Or simply insert map*
-
-## Western Vermont
-
-* Blah
-
-*Or simply insert map*
-
-## Monogahela NF
-
-* Monogahela NF is cool
-BLAH
-
-*Or simply insert map*
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("images/MNhistoric.png")
 
 ## Silas inserts a chart
 
