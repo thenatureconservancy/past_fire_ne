@@ -11,25 +11,51 @@ title-slide-attributes:
   data-background-position: 2% 98%, center
 ---
 
-## So what-Indigenous burning
+## So what-Indigenous burning 
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="90%", fig.align='center'}
 knitr::include_graphics("images/tulowiecki_2024.png")
 ```
 
-Map from Tulowiecki 2024, witness tree classification from Paciorek et al., 2016
 
-## So what
 
-RAD screenshot information
+## So what-Resist, Adapt, Direct
 
-## Our data
+<br>
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
-knitr::include_graphics("images/side_by_side.jpg")
-```
 
-Data from landfire.gov
+"Despite striking global change, management to ensure healthy landscapes and sustained natural resources has tended to set objectives on the basis of the historical range of variability in stationary ecosystems."  *Magness et al. (Bioscience 2022)*
+
+<br>
+
+<div style="text-align: center;">
+  <h2>What is plausible?</h2>
+</div>
+
+##
+
+::: columns
+::: {.column width="60%"}
+
+![](images/conus_mfri.jpg)
+:::
+
+::: {.column width="40%"}
+
+LANDFIRE datasets allow us to look at past and present
+
+<br>
+
+Biophysical Settings models document "reference" conditions
+
+:::
+:::
+
+<br>
+
+<div style="text-align: center;">
+  <h2>https://landfire.gov/</h2>
+</div>
 
 ## Regional look
 
@@ -160,7 +186,7 @@ ggplot(evt_mn1, aes(x=Percentage,y=Freq, fill = as.factor(Freq)))+
 
 ## Results- Manageable landscape 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
-evt_noag <- read_csv("~/CDL/NEFire/evt_noag.csv")
+evt_noag <- read_csv("data/evt_noag.csv")
 
 evt_noag<-evt_noag%>%
   mutate(Acres = Count*0.2223945)%>%
