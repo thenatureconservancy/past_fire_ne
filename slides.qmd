@@ -57,31 +57,38 @@ Biophysical Settings models document "reference" conditions
   <h2>https://landfire.gov/</h2>
 </div>
 
+## From Biophysical Settings to Fire Return Interval
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("images/bps_to_fri.png")
+```
+
+Data from landfire.gov
+
 ## Regional look
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
 knitr::include_graphics("images/NE_US_Layout2.jpg")
 ```
 
-## Minnesota
-
--   Minnesota is cool
--   Minnesota had fire
--   Arrowhead is interesting
-
-*Or simply insert map*
-
 ## Western Vermont
 
--   Blah
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("images/VThistoric.png")
+```
 
-*Or simply insert map*
+## Monongahela National Forest
 
-## Monogahela NF
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
 
--   Monogahela NF is cool BLAH
+knitr::include_graphics("images/MNFhistoric.png")
+```
 
-*Or simply insert map*
+## Minnesota
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("images/MNhistoric.png")
+```
 
 ## Change in Fire 
 :::{.incremental}
