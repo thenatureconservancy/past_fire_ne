@@ -1,6 +1,6 @@
 ---
 title: "Beyond the Burn: a presentation at Ore Dock Brewery"
-author: "Randy Swaty, Damon Panek, Kelly Ahern and Randy Swaty"
+author: "Randy Swaty, Damon Panek, Kelly Ahern and Silas Pickhart"
 format: 
   html:
     toc: true
@@ -10,7 +10,12 @@ theme: flatly
 
 
 ## What?
-On **February 13, 2025, 7-8pm ET**, Randy, Damon, Kelly and Silas will deliver a presentation titled *"Beyond the Burn: Fire's Beneficial Role in Northeast Landscapes and Human Lives"* followed by a discussion at the Ore Dock Brewing Company.
+On **February 13, 2025, 7-8pm ET** a presentation titled *"Beyond the Burn: Fire's Beneficial Role in Northeast Landscapes and Human Lives"* followed by a discussion at the [Ore Dock Brewing Company](https://oredockbrewing.com/).
+
+## Who?
+The presenters will be:
+
+* Randy Swaty, ecologist with The Nature Conservancy's LANDFIRE Team
 
 ## 43,694,512 
 
