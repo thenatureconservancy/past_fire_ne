@@ -58,20 +58,19 @@ knitr::include_graphics("images/NE_US_Layout2.jpg")
 *Or simply insert map*
 
 ## Change in Fire 
-:::{.incremental}
+
 - Easy and relatively quick method to:
   - Visualize broad fire patterns from the past
   - Visualize expected fire patterns today
   - Swiftly compare and contrast these two standards
   - Draw conclusions about how the role fire has shifted  
   
-:::  
+
        
 ## Change in Fire: The Methods
-::::::{.incremental}
-Assigning "Fire Frequency Groups"
+Assigning "Fire Frequency Groups" 
 
-::::: columns 
+:::: columns 
 ::: column 
 
 Historical: 
@@ -87,13 +86,13 @@ Historical:
 ::: column
 Current:
 
--  Expected FRI of EVT
+- Assign groups to EVT
+    -   Vegetation type's fire adaptation 
     -   NatureServe Descriptions
     -   Educated Guessing
     
 :::
 ::::
-::::::
 ## Mapping- Historical
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
@@ -139,7 +138,8 @@ ggplot(bps_mn1, aes(x=Percentage,y=SI_FRG, fill = as.factor(SI_FRG)))+
   ylab("")+
   scale_x_continuous(labels = label_comma())+
   theme_bw()+
-  theme(legend.position = "none")
+  theme(legend.position = "none", plot.title = element_text(size=22),
+        plot.subtitle = element_text(size = 12)) 
   
 
 ```
@@ -168,7 +168,9 @@ ggplot(evt_mn1, aes(x=Percentage,y=Freq, fill = as.factor(Freq)))+
   ylab("")+
   scale_x_continuous(labels = label_comma())+
   theme_bw()+
-  theme(legend.position = "none") 
+  theme(legend.position = "none", 
+        plot.title = element_text(size=22),
+        plot.subtitle = element_text(size = 12)) 
 ```
 
 ## Results- Manageable landscape 
@@ -194,7 +196,8 @@ ggplot(evt_noag, aes(x=Percentage,y=Freq, fill = as.factor(Freq)))+
   ylab("")+
   scale_x_continuous(labels = label_comma())+
   theme_bw()+
-  theme(legend.position = "none") 
+  theme(legend.position = "none", plot.title = element_text(size=22),
+        plot.subtitle = element_text(size = 12)) 
 ```
 
 ## The change
@@ -240,17 +243,25 @@ ggplot(frg_chang, aes(
   scale_color_manual(
     values = custom_colors) +
   theme_bw(base_size = 12) +
-  theme(legend.position = "none")
+  theme(legend.position = "none", plot.title = element_text(size=22),
+        plot.subtitle = element_text(size = 12)) 
 ```
 
+## What Happened? and why does this matter?
+
+- Fire Suppression
+- Mesophication (forests becoming more moist)
+- Ecosystem resiliency
+- Biodiversity
+
+
 ## Change in Fire- Summary
-:::{.incremental}
+
 - Most of Minnesota used to burn frequently
 - Now it doesn't but...
     - The need for frequent fire still exists  
 - Able to visualize these trends using this method
 
-:::
  
 
 
