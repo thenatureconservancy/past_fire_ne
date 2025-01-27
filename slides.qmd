@@ -21,10 +21,6 @@ knitr::include_graphics("images/tulowiecki_2024.png")
 
 ## So what-Resist, Adapt, Direct
 
-
-## From Biophysical Settings to Fire Return Interval
-
-
 "Despite striking global change, management to ensure healthy landscapes and sustained natural resources has tended to set objectives on the basis of the historical range of variability in stationary ecosystems."  *Magness et al. (Bioscience 2022)*
 
 <br>
