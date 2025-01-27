@@ -21,8 +21,12 @@ knitr::include_graphics("images/tulowiecki_2024.png")
 
 ## So what-Resist, Adapt, Direct
 
+<<<<<<< HEAD
 <br>
 
+=======
+## From Biophysical Settings to Fire Return Interval
+>>>>>>> origin/kellysbranch
 
 "Despite striking global change, management to ensure healthy landscapes and sustained natural resources has tended to set objectives on the basis of the historical range of variability in stationary ecosystems."  *Magness et al. (Bioscience 2022)*
 
@@ -75,19 +79,27 @@ knitr::include_graphics("images/NE_US_Layout2.jpg")
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
 knitr::include_graphics("images/VThistoric.png")
+<<<<<<< HEAD
 ```
+=======
+>>>>>>> origin/kellysbranch
 
 ## Monongahela National Forest
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
+<<<<<<< HEAD
 
 knitr::include_graphics("images/MNFhistoric.png")
 ```
+=======
+knitr::include_graphics("images/MNFhistoric.png")
+>>>>>>> origin/kellysbranch
 
 ## Minnesota
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
 knitr::include_graphics("images/MNhistoric.png")
+<<<<<<< HEAD
 ```
 
 ## Change in Fire 
@@ -115,6 +127,10 @@ Historical:
     -   200 + Years = Rare
     
 :::
+=======
+
+## Silas inserts a chart
+>>>>>>> origin/kellysbranch
 
 
 ::: column
