@@ -103,7 +103,7 @@ knitr::include_graphics("images/MN_Historical2.jpg")
 ## Mapping- Current
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
-knitr::include_graphics("images/MN_today2.jpg")
+knitr::include_graphics("images/MN_today.jpg")
 ```
 
 ## Results- Historical
@@ -164,7 +164,7 @@ custom_colors <- c("Frequent" = "orange", "Rare" = "skyblue2", "Intermediate" = 
 ggplot(evt_mn1, aes(x=Percentage,y=Freq, fill = as.factor(Freq)))+
   geom_bar(stat= "identity")+
   scale_fill_manual(values = custom_colors)+
-  labs(title = "Current Expected Fire Frequency",subtitle = "Expected Percent of Landscape in Each Frequency Group", caption = "Derived From LANDFIRE EVT Data")+
+  labs(title = "Current Ideal Fire Frequency",subtitle = "Percent of Landscape in Each Frequency Group", caption = "Derived From LANDFIRE EVT Data")+
   ylab("")+
   scale_x_continuous(labels = label_comma())+
   theme_bw()+
@@ -192,7 +192,7 @@ custom_colors <- c("Frequent" = "orange", "Rare" = "skyblue2", "Intermediate" = 
 ggplot(evt_noag, aes(x=Percentage,y=Freq, fill = as.factor(Freq)))+
   geom_bar(stat= "identity")+
   scale_fill_manual(values = custom_colors)+
-  labs(title = "Current Expected Fire Frequency",subtitle = "Expected When Removing Development and Agriculture", caption = "Derived From LANDFIRE EVT Data")+
+  labs(title = "Current Ideal Fire Frequency",subtitle = "When Removing Development and Agriculture", caption = "Derived From LANDFIRE EVT Data")+
   ylab("")+
   scale_x_continuous(labels = label_comma())+
   theme_bw()+
