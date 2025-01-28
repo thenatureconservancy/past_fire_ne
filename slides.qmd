@@ -54,43 +54,37 @@ Biophysical Settings models document "reference" conditions
   <h2>https://landfire.gov/</h2>
 </div>
 
-## From Biophysical Settings to Fire Return Interval
+## BPS to FRI
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
-knitr::include_graphics("images/bps_to_fri.png")
-```
-
-Data from landfire.gov
-
-## Regional look
-
-```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
-knitr::include_graphics("images/NE_US_Layout2.jpg")
-```
-
-## Western Vermont
-
-```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
-knitr::include_graphics("images/VThistoric.png")
-
+knitr::include_graphics("images/groupveg_fri.png")
 ```
 
 
-
-## Monongahela National Forest
+## Northeast United States  
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("images/overview.png")
+```
+
+## Vermont
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("images/vermont.png")
+```
 
 
-knitr::include_graphics("images/MNFhistoric.png")
+## Upper Great Lakes
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("images/michigan.png")
 ```
 
 
 ## Minnesota
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
-knitr::include_graphics("images/MNhistoric.png")
-
+knitr::include_graphics("images/minnesota.png")
 ```
 
 ## Change in Fire 
