@@ -133,7 +133,7 @@ knitr::include_graphics("images/MN_Historical2.jpg")
 ## Mapping- Current
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
-knitr::include_graphics("images/MN_today.jpg")
+knitr::include_graphics("images/MN_today2.jpg")
 ```
 
 ## Results- Historical
@@ -169,7 +169,8 @@ ggplot(bps_mn1, aes(x=Percentage,y=SI_FRG, fill = as.factor(SI_FRG)))+
   ylab("")+
   scale_x_continuous(labels = label_comma())+
   theme_bw()+
-  theme(legend.position = "none", plot.title = element_text(size=22), theme(legend.position = "none", plot.title = element_text(size=16),plot.subtitle = element_text(size = 12))) 
+  theme(legend.position = "none", plot.title = element_text(size=16),
+        plot.subtitle = element_text(size = 12)) 
   
 
 ```
@@ -194,20 +195,14 @@ custom_colors <- c("Frequent" = "orange", "Rare" = "skyblue2", "Intermediate" = 
 ggplot(evt_mn1, aes(x=Percentage,y=Freq, fill = as.factor(Freq)))+
   geom_bar(stat= "identity")+
   scale_fill_manual(values = custom_colors)+
-  labs(title = "Current Ideal Fire Frequency",subtitle = "Percent of Landscape in Each Frequency Group", caption = "Derived From LANDFIRE EVT Data")+
-  ylab("")+
-  scale_x_continuous(labels = label_comma())+
-  theme_bw()+
-  theme(legend.position = "none",
-  plot.title = element_text(size=22)+
   labs(title = "Current Percent of Minnesota in Each Frequency Group",
-  caption = "Derived From LANDFIRE EVT Data")+
-  ylab("")+
+       caption = "Derived From LANDFIRE EVT Data")+
+  ylab("") +
   scale_x_continuous(labels = label_comma())+
   theme_bw()+
   theme(legend.position = "none", 
         plot.title = element_text(size=16),
-        plot.subtitle = element_text(size = 12))) 
+        plot.subtitle = element_text(size = 12)) 
 ```
 
 ## Results- Manageable landscape 
@@ -229,18 +224,13 @@ custom_colors <- c("Frequent" = "orange", "Rare" = "skyblue2", "Intermediate" = 
 ggplot(evt_noag, aes(x=Percentage,y=Freq, fill = as.factor(Freq)))+
   geom_bar(stat= "identity")+
   scale_fill_manual(values = custom_colors)+
-  labs(title = "Current Ideal Fire Frequency",subtitle = "When Removing Development and Agriculture", caption = "Derived From LANDFIRE EVT Data")+
-  ylab("")+
-  scale_x_continuous(labels = label_comma())+
-  theme_bw()+
-  theme(legend.position = "none", plot.title = element_text(size=22),
   labs(title = "Current Expected Fire Frequency with Developed and Agricultural Areas Removed",
        caption = "Derived From LANDFIRE EVT Data")+
   ylab("")+
   scale_x_continuous(labels = label_comma())+
   theme_bw()+
   theme(legend.position = "none", plot.title = element_text(size=16),
-        plot.subtitle = element_text(size = 12))) 
+        plot.subtitle = element_text(size = 12)) 
 ```
 
 ## The Change
@@ -262,11 +252,11 @@ evt_noag1<- evt_noag %>%
 bps_frgpct<-bps_mn2%>%
   group_by(SI_FRG) %>%
   summarize(hist_percent = sum(Percentage, na.rm = TRUE),)%>%
-  rename(Freq = SI_FRG,)
+  rename(Freq = SI_FRG)
 
 evt_frgpct<-evt_noag1%>%
   group_by(Freq) %>%
-  summarize(cur_percent = sum(Percentage, na.rm = TRUE))
+  summarize(cur_percent = sum(Percentage, na.rm = TRUE),)
 
 frg_chang<-left_join(bps_frgpct,evt_frgpct, by="Freq")
 
@@ -290,24 +280,6 @@ ggplot(frg_chang, aes(
         plot.subtitle = element_text(size = 12)) 
 ```
 
-
-## What Happened? and why does this matter?
-
-- Fire Suppression
-- Mesophication (forests becoming more moist)
-- Ecosystem resiliency
-- Biodiversity
-
-
-## Change in Fire- Summary
-
-- Most of Minnesota used to burn frequently
-- Now it doesn't but...
-    - The need for frequent fire still exists  
-- Able to visualize these trends using this method
-
- 
-=======
 ## Why does this matter?
 
 
@@ -343,6 +315,5 @@ ggplot(frg_chang, aes(
 <br>
 
 ![](images/banner_2021.jpg){width="120%"}
-
 
 
