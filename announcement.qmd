@@ -1,0 +1,52 @@
+---
+title: "Beyond the Burn: a presentation at Ore Dock Brewery"
+author: "Randy Swaty, Kelly Ahern, Silas Pickhart and Damon Panek"
+format: 
+  html:
+    toc: true
+  
+theme: flatly
+---
+
+
+## What's Happening?
+On **February 13, 2025, 7-8pm ET** a presentation titled *"Beyond the Burn: Fire's Beneficial Role in Northeast Landscapes and Human Lives"* followed by a discussion at the [Ore Dock Brewing Company](https://oredockbrewing.com/).
+
+## Who's Presenting?
+The presenters will be:
+
+* Randy Swaty, ecologist with The Nature Conservancy's LANDFIRE Team
+* Kelly Ahern, ecologist and recent NMU graduate
+* Silas Pickhardt, NMU senior
+* Damon Panek, Wildland Fire practitioner, Ojibwe Language Immersion Trainee
+
+## 43,694,512 Acres
+
+That is how many acres we calculated burned every year on average in the northeastern United States prior to European colonization.  That means that on average, roughly 10% of the land in this region burned every year. Many of those acres were burned by Indigenous peoples, managing the land for dozens of reasons.  For example, tribes would burn areas as a way to 'herd' bison to the east coast for trade.  Their approach to land management was "adaptive" in the truest sense of the word. For example, Indigenous people managed bison movements not with helicopters, border collies or ATVs, rather they applied generations of Traditional Ecological Knowledge to their vegetation management decisions.
+
+
+**Average number of years between fires historically. Yellows = 1-5 years, Purples = hundreds of years**
+
+![](images/ne_fri_quick.jpg){width="100%"}
+
+
+## 119,283 Acres
+This is the number of acres burned for the same area in 2023.  Many of the acres have been converted to agricultural or urban land uses, and we are really good at putting out fires.  This is not to mention what happened to the tribes of the area who were managing for thousands of years.  
+
+## So What?
+
+Pines, hickories, blueberries, oh my! What do all these species have in common? Hint: They are all fire-adapted species, meaning they rely on regular fire intervals to maintain ecological resilience and succession within the ecosystem.
+
+Historically we've been very effective at fire suppression in this country. This suppression has had a whole slew of unintended consequences currently facing natural resource managers. 
+
+Some managers are looking to the past for help with managing future forests which would naturally include Traditional Ecological Knowledge. Tribal members have had success managing forests for thousands of years, but simply applying fire prescriptions of the past doesn't take into account the nuance of climate change, land conversion and cultural sensitivities.
+
+
+## What we'll cover
+
+In our presentation, Randy Swaty will introduce the topic and the presenters.  Damon will start and end the circle, addressing the "So what?" question with stories of Indigenous burning.  Kelly Ahern will show us where the fires were, and explore some case studies.  Silas Pickhardt will dig into the ecology, and current patterns.  We'll all look forward to your questions.
+
+
+![](images/banner_2021.jpg){width="100%"}
+
+

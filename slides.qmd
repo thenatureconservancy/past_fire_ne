@@ -11,51 +11,81 @@ title-slide-attributes:
   data-background-position: 2% 98%, center
 ---
 
-## So what-Indigenous burning
+## So what-Indigenous burning 
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="90%", fig.align='center'}
 knitr::include_graphics("images/tulowiecki_2024.png")
 ```
 
-Map from Tulowiecki 2024, witness tree classification from Paciorek et al., 2016
 
-## So what
 
-RAD screenshot information
+## So what-Resist, Adapt, Direct
 
-## Our data
+"Despite striking global change, management to ensure healthy landscapes and sustained natural resources has tended to set objectives on the basis of the historical range of variability in stationary ecosystems."  *Magness et al. (Bioscience 2022)*
+
+<br>
+
+<div style="text-align: center;">
+  <h2>What is plausible?</h2>
+</div>
+
+##
+
+::: columns
+::: {.column width="60%"}
+
+![](images/conus_mfri.jpg)
+:::
+
+::: {.column width="40%"}
+
+LANDFIRE datasets allow us to look at past and present
+
+<br>
+
+Biophysical Settings models document "reference" conditions
+
+:::
+:::
+
+<br>
+
+<div style="text-align: center;">
+  <h2>https://landfire.gov/</h2>
+</div>
+
+## BPS to FRI
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
-knitr::include_graphics("images/side_by_side.jpg")
+knitr::include_graphics("images/groupveg_fri.png")
 ```
 
-Data from landfire.gov
 
-## Regional look
+## Northeast United States  
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
-knitr::include_graphics("images/NE_US_Layout2.jpg")
+knitr::include_graphics("images/overview.png")
 ```
+
+## Vermont
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("images/vermont.png")
+```
+
+
+## Upper Great Lakes
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("images/michigan.png")
+```
+
 
 ## Minnesota
 
--   Minnesota is cool
--   Minnesota had fire
--   Arrowhead is interesting
-
-*Or simply insert map*
-
-## Western Vermont
-
--   Blah
-
-*Or simply insert map*
-
-## Monogahela NF
-
--   Monogahela NF is cool BLAH
-
-*Or simply insert map*
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("images/minnesota.png")
+```
 
 ## Change in Fire 
 
@@ -134,12 +164,12 @@ custom_colors <- c("Frequent" = "orange", "Rare" = "skyblue2", "Intermediate" = 
 ggplot(bps_mn1, aes(x=Percentage,y=SI_FRG, fill = as.factor(SI_FRG)))+
   geom_bar(stat= "identity")+
   scale_fill_manual(values = custom_colors)+
-  labs(title = "Historical Fire Frequency", subtitle = "Percent of Landscape in Each Frequency Group",caption = "Derived From LANDFIRE BpS Data")+
+  labs(title = "Historical Percent of Minnesota in Each Frequency Group", 
+       caption = "Derived From LANDFIRE BpS Data")+
   ylab("")+
   scale_x_continuous(labels = label_comma())+
   theme_bw()+
-  theme(legend.position = "none", plot.title = element_text(size=22),
-        plot.subtitle = element_text(size = 12)) 
+  theme(legend.position = "none", plot.title = element_text(size=22), theme(legend.position = "none", plot.title = element_text(size=16),plot.subtitle = element_text(size = 12))) 
   
 
 ```
@@ -168,14 +198,21 @@ ggplot(evt_mn1, aes(x=Percentage,y=Freq, fill = as.factor(Freq)))+
   ylab("")+
   scale_x_continuous(labels = label_comma())+
   theme_bw()+
+  theme(legend.position = "none",
+  plot.title = element_text(size=22)+
+  labs(title = "Current Percent of Minnesota in Each Frequency Group",
+  caption = "Derived From LANDFIRE EVT Data")+
+  ylab("")+
+  scale_x_continuous(labels = label_comma())+
+  theme_bw()+
   theme(legend.position = "none", 
-        plot.title = element_text(size=22),
-        plot.subtitle = element_text(size = 12)) 
+        plot.title = element_text(size=16),
+        plot.subtitle = element_text(size = 12))) 
 ```
 
 ## Results- Manageable landscape 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
-evt_noag <- read_csv("~/CDL/NEFire/evt_noag.csv")
+evt_noag <- read_csv("data/evt_noag.csv")
 
 evt_noag<-evt_noag%>%
   mutate(Acres = Count*0.2223945)%>%
@@ -197,10 +234,16 @@ ggplot(evt_noag, aes(x=Percentage,y=Freq, fill = as.factor(Freq)))+
   scale_x_continuous(labels = label_comma())+
   theme_bw()+
   theme(legend.position = "none", plot.title = element_text(size=22),
-        plot.subtitle = element_text(size = 12)) 
+  labs(title = "Current Expected Fire Frequency with Developed and Agricultural Areas Removed",
+       caption = "Derived From LANDFIRE EVT Data")+
+  ylab("")+
+  scale_x_continuous(labels = label_comma())+
+  theme_bw()+
+  theme(legend.position = "none", plot.title = element_text(size=16),
+        plot.subtitle = element_text(size = 12))) 
 ```
 
-## The change
+## The Change
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
 ##Showing change
 
@@ -219,11 +262,11 @@ evt_noag1<- evt_noag %>%
 bps_frgpct<-bps_mn2%>%
   group_by(SI_FRG) %>%
   summarize(hist_percent = sum(Percentage, na.rm = TRUE),)%>%
-  rename(Freq = SI_FRG)
+  rename(Freq = SI_FRG,)
 
 evt_frgpct<-evt_noag1%>%
   group_by(Freq) %>%
-  summarize(cur_percent = sum(Percentage, na.rm = TRUE),)
+  summarize(cur_percent = sum(Percentage, na.rm = TRUE))
 
 frg_chang<-left_join(bps_frgpct,evt_frgpct, by="Freq")
 
@@ -247,6 +290,7 @@ ggplot(frg_chang, aes(
         plot.subtitle = element_text(size = 12)) 
 ```
 
+
 ## What Happened? and why does this matter?
 
 - Fire Suppression
@@ -263,5 +307,42 @@ ggplot(frg_chang, aes(
 - Able to visualize these trends using this method
 
  
+=======
+## Why does this matter?
+
+
+::: columns
+::: {.column width="50%"}
+
+![](images/conus_mfri.jpg)
+:::
+
+::: {.column width="50%"}
+
+- Mesophication 
+- Ecosystem resiliency
+- Biodiversity
+
+:::
+:::
+
+
+
+## Summary
+
+- We calculated 44M acres of fire per year historically
+- Fire adapted ecosystems have diminished on the landscape
+
+<br>
+
+<div style="text-align: center;">
+  <h4>Knowledge of historical ecosystems can lead to better management practices today 
+</div>
+
+<br>
+<br>
+
+![](images/banner_2021.jpg){width="120%"}
+
 
 
