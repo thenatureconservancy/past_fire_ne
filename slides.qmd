@@ -21,8 +21,11 @@ knitr::include_graphics("images/tulowiecki_2024.png")
 
 ## So what-Resist, Adapt, Direct
 
+<br>
+
 "Despite striking global change, management to ensure healthy landscapes and sustained natural resources has tended to set objectives on the basis of the historical range of variability in stationary ecosystems."  *Magness et al. (Bioscience 2022)*
 
+<br>
 <br>
 
 <div style="text-align: center;">
@@ -286,7 +289,7 @@ ggplot(frg_chang, aes(
 ::: columns
 ::: {.column width="50%"}
 
-![](images/conus_mfri.jpg)
+![](images/mom_on_tractor.jpg)
 :::
 
 ::: {.column width="50%"}
