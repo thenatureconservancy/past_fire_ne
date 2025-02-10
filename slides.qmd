@@ -86,175 +86,143 @@ knitr::include_graphics("images/michigan.png")
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
 knitr::include_graphics("images/minnesota.png")
 ```
+## Visualizing change
 
-## Change in Fire 
-
-- Easy and relatively quick method to:
-  - Visualize broad fire patterns from the past
-  - Visualize expected fire patterns today
-  - Swiftly compare and contrast these two standards
-  - Draw conclusions about how the role fire has shifted  
-  
-
-       
-## Change in Fire: The Methods
-Assigning "Fire Frequency Groups" 
-
-:::: columns 
-::: column 
-
-Historical: 
-
--  Binning BPS MFRI_all
-    -   0-30 Years = Frequent
-    -   30-200 Years = Intermediate
-    -   200 + Years = Rare
-    
-:::
-
-
-::: column
-Current:
-
-- Assign groups to EVT
-    -   Vegetation type's fire adaptation 
-    -   NatureServe Descriptions
-    -   Educated Guessing
-    
-:::
-::::
-## Mapping- Historical
-
-```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
-knitr::include_graphics("images/MN_Historical2.jpg")
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="100%", fig.align='center'}
+knitr::include_graphics("images/frequency.png")
 ```
 
-
-## Mapping- Current
+## 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
-knitr::include_graphics("images/MN_today2.jpg")
+knitr::include_graphics("images/Historical.jpg")
 ```
 
-## Results- Historical
+## 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
-library(readr)
 library(ggplot2)
+library(readr)
 library(dplyr)
 library(viridis)
 library(scales) 
+## Whole state-BPS
 
-bps_mn <- read_csv("data/BPS_MN.csv")
+bps <- read_csv("data/FRG_midwest.csv")
 
 
-bps_mn1<-bps_mn%>%
+bps1<-bps%>%
   mutate(Acres = Count*0.2223945)%>% ##Calculate acres
-  mutate(Percentage = Acres / sum(Acres) * 100)%>%## percent
+  mutate(Percentage = Acres / sum(Acres) * 100)%>% ## percent
   filter(!is.na(SI_FRG))
 
 
-bps_mn1$SI_FRG <- factor(bps_mn1$SI_FRG, levels = c("Rare","Intermediate","Frequent"))
+bps1$SI_FRG <- factor(bps1$SI_FRG, levels = c("Rare","Intermediate","Frequent"))
 
 
 
 ##give colors to bar
-custom_colors <- c("Frequent" = "orange", "Rare" = "skyblue2", "Intermediate" = "darkgreen")
+custom_colors <- c("Frequent" = "orange2", "Rare" = "skyblue2", "Intermediate" = "darkgreen")
 
-ggplot(bps_mn1, aes(x=Percentage,y=SI_FRG, fill = as.factor(SI_FRG)))+
+ggplot(bps1, aes(x=Percentage,y=SI_FRG, fill = as.factor(SI_FRG)))+
   geom_bar(stat= "identity")+
   scale_fill_manual(values = custom_colors)+
-  labs(title = "Historical Percent of Minnesota in Each Frequency Group", 
-       caption = "Derived From LANDFIRE BpS Data")+
+  labs(title = "Historical Distribution of Fire Adapted ecosystems")+
   ylab("")+
   scale_x_continuous(labels = label_comma())+
-  theme_bw()+
-  theme(legend.position = "none", plot.title = element_text(size=16),
-        plot.subtitle = element_text(size = 12)) 
-  
-
+  theme(legend.position = "none", title = element_text(size=15), 
+        axis.title.x = element_text(size = 10))
 ```
 
+:::: fragment
+::: {style="text-align: center;"}
+**"PYRODIVERISTY"**
 
-## Results- Current
+Diversity of Fire
+:::
+::::
+
+## 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
-##EVT
-evt_mn <- read_csv("data/EVT_MN.csv")
+knitr::include_graphics("images/Current.jpg")
+```
 
-evt_mn1<-evt_mn%>%
+## 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
+##Whole state-EVT
+evt_frg <- read_csv("data/EVT_FRG_midwest.csv")
+
+evt_frg1<-evt_frg%>%
   mutate(Acres = Count*0.2223945)%>%##Calculate acres
   mutate(Percentage = Acres / sum(Acres) * 100)%>%
   filter(!is.na(Freq))
 
-evt_mn1$Freq <- factor(evt_mn1$Freq, levels = c("Rare","Intermediate","Frequent"))
+evt_frg1$Freq <- factor(evt_frg1$Freq, levels = c("Rare","Intermediate","Frequent"))
 
 ##give colors to bar
-custom_colors <- c("Frequent" = "orange", "Rare" = "skyblue2", "Intermediate" = "darkgreen")
+custom_colors <- c("Frequent" = "orange2", "Rare" = "skyblue2", "Intermediate" = "darkgreen")
 
-ggplot(evt_mn1, aes(x=Percentage,y=Freq, fill = as.factor(Freq)))+
+
+ggplot(evt_frg1, aes(x=Percentage,y=Freq, fill = as.factor(Freq)))+
   geom_bar(stat= "identity")+
   scale_fill_manual(values = custom_colors)+
-  labs(title = "Current Percent of Minnesota in Each Frequency Group",
-       caption = "Derived From LANDFIRE EVT Data")+
-  ylab("") +
+  labs(title = "Current Expected Fire Adapted Ecosystems", caption = "Derived From LANDFIRE EVT Data")+
+  ylab("")+
   scale_x_continuous(labels = label_comma())+
-  theme_bw()+
-  theme(legend.position = "none", 
-        plot.title = element_text(size=16),
-        plot.subtitle = element_text(size = 12)) 
+   theme(legend.position = "none", title = element_text(size=15), 
+        axis.title.x = element_text(size = 10))
 ```
 
-## Results- Manageable landscape 
-```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
-evt_noag <- read_csv("data/evt_noag.csv")
+## 
 
-evt_noag<-evt_noag%>%
-  mutate(Acres = Count*0.2223945)%>%
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
+##Whole state-EVT
+evt_noag <- read_csv("data/evt_frg_noag.csv")
+
+evt_noag1<-evt_noag%>%
+  mutate(Acres = Count*0.2223945)%>%##Calculate acres
   mutate(Percentage = Acres / sum(Acres) * 100)%>%
   filter(!is.na(Freq))
 
-evt_noag$Freq <- factor(evt_noag$Freq, levels = c("Rare","Intermediate","Frequent"))
-
-
+evt_noag1$Freq <- factor(evt_noag1$Freq, levels = c("Rare","Intermediate","Frequent"))
 
 ##give colors to bar
-custom_colors <- c("Frequent" = "orange", "Rare" = "skyblue2", "Intermediate" = "darkgreen")
+custom_colors <- c("Frequent" = "orange2", "Rare" = "skyblue2", "Intermediate" = "darkgreen")
 
-ggplot(evt_noag, aes(x=Percentage,y=Freq, fill = as.factor(Freq)))+
+
+ggplot(evt_noag1, aes(x=Percentage,y=Freq, fill = as.factor(Freq)))+
   geom_bar(stat= "identity")+
   scale_fill_manual(values = custom_colors)+
-  labs(title = "Current Expected Fire Frequency with Developed and Agricultural Areas Removed",
-       caption = "Derived From LANDFIRE EVT Data")+
+  labs(title = "Current Expected Fire Adapted Ecosystems", subtitle = "Without Development", caption = "Derived From LANDFIRE EVT Data")+
   ylab("")+
   scale_x_continuous(labels = label_comma())+
-  theme_bw()+
-  theme(legend.position = "none", plot.title = element_text(size=16),
-        plot.subtitle = element_text(size = 12)) 
+   theme(legend.position = "none", title = element_text(size=15), 
+        axis.title.x = element_text(size = 10))
 ```
 
-## The Change
-```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
-##Showing change
+## 
 
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
 ##historical fire regime group percentage
 
-bps_mn2<- bps_mn1 %>%    
+bps2<- bps1 %>%    
   mutate(Percentage = Acres / sum(Acres) * 100)  
 
 ##current fire regime group percentage
 
-evt_noag1<- evt_noag %>%
+evt1<- evt_noag1 %>%
   mutate(Percentage = Acres / sum(Acres) * 100) 
 
 ## make new df with changing percentages
 
-bps_frgpct<-bps_mn2%>%
+bps_frgpct<-bps2%>%
   group_by(SI_FRG) %>%
   summarize(hist_percent = sum(Percentage, na.rm = TRUE),)%>%
   rename(Freq = SI_FRG)
 
-evt_frgpct<-evt_noag1%>%
+evt_frgpct<-evt1%>%
   group_by(Freq) %>%
   summarize(cur_percent = sum(Percentage, na.rm = TRUE),)
 
@@ -266,38 +234,190 @@ ggplot(frg_chang, aes(
     color = Freq)) +
   geom_segment(
     arrow = arrow(angle = 30, length = unit(0.5, 'cm')),
-    linewidth = 3) +
+    linewidth = 2) +
   labs(
     x = 'Percent', 
     y = element_blank(),
     title = 'Changes in Fire Frequency',
-    subtitle = "Minnesota: Historical to ~2023"
+    subtitle = "Midwest: Historical to ~2023"
   ) +
   scale_color_manual(
     values = custom_colors) +
   theme_bw(base_size = 12) +
-  theme(legend.position = "none", plot.title = element_text(size=22),
-        plot.subtitle = element_text(size = 12)) 
+  theme(legend.position = "none", title = element_text(size=15), 
+        axis.title.x = element_text(size = 10))
+
 ```
 
-## Why does this matter?
+## Why this shift matters
 
+-   This change has happened in recent history (\~150 years)
+    -   faster than in last 1000
+-   Climate resiliency
+    -   Preparing for a changing world
+-   Once these ecosystems are lost, often gone forever
+-   Pyrodiversity = Biodiversity
 
-::: columns
-::: {.column width="50%"}
+## 
 
-![](images/conus_mfri.jpg)
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="100%", fig.align='center'}
+knitr::include_graphics("images/driftlesslayout.jpg")
+```
+
+## 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("images/catlin.jpg")
+```
+
+## 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("images/catlin2.jpg")
+```
+
+## 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("images/driftlesstoday.jpg")
+```
+
+## 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("images/driftlesstoday4.jpeg")
+```
+
+## What Happened?
+
+![](images/driftlesstoday4.jpeg){.absolute bottom="0" right="0" width="600" height="350"} ![](images/catlin2.jpg){.absolute top="60" left="0" width="600" height="350"}
+
+## How We Lost Fire: \~1800-1850
+
+::: {style="text-align: center;"}
+**Extirpation and Removal of Native People**
 :::
 
-::: {.column width="50%"}
+::: fragment
+![](images/hochunk.jpg){.absolute bottom="0" left="0" width="300" height="450"}
 
-- Mesophication 
-- Ecosystem resiliency
-- Biodiversity
+![](images/Muck-a-tak-mish-o-kah-kaik.jpg){.absolute bottom="0" left="350" width="300" height="450"}
+
+![](images/One-horn.jpg){.absolute bottom="0" right="0" width="300" height="450"}
+:::
+
+## How We Lost Fire: Mid 1800s-1900
+
+::: {style="text-align: center;"}
+**Development and Agriculture**
+:::
+
+::: {.fragment .semi-fade-out}
+![](images/mining.jpg){.absolute top="150" left="0" wdith="800" height="400"} ![](images/mining2.jpg){.absolute top="300" right="0" wdith="800" height="400"}
+:::
+
+::: fragment
+![](images/farming.jpg){.absolute bottom="0" left="0" width="600" height="350"} ![](images/farming2.jpg){.absolute top="200" right="0" wdith="600" height="350"}
+:::
+
+## How We Lost Fire: Early 1900s-Present
+
+::: {style="text-align: center;"}
+**Policy and Rhetoric**
+:::
+
+::: {.fragment .fade-out}
+-   Timber Protection Act of 1922
+-   Clarke-Mcnary Act of 1924
+-   10am Policy of 1935
+:::
+
+::: fragment
+![](images/Easternburned.png){.absolute top="150" left="0" wdith="800" height="400"}
+:::
+
+::: fragment
+![](images/arrow.png){.absolute top="200" left="150" width="500" height="50"}
+:::
+
+::: fragment
+![](images/smokey1.jpg){.absolute top="100" right="100" width="250" height="400"}
+:::
+
+::: fragment
+![](images/fireprevention.jpg){.absolute bottom="0" right="0" width="250" height="400"}
+:::
+
+::: fragment
+![](images/fsmessage.png){.absolute bottom="0" left="0"}
+:::
+
+## Ecological Result
+
+:::: {.fragment .fade-out}
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("images/mesophication.PNG")
+```
+
+::: footer
+from Nowacki and Abrams (2008)
+:::
+::::
+
+::: fragment
+![](images/driftlesstoday4.jpeg){.absolute bottom="0" right="0" width="600" height="350"} ![](images/catlin2.jpg){.absolute top="60" left="0" width="600" height="350"}
+:::
+
+## Restoration
+
+::: {.fragment .semi-fade-out}
+![](images/land1.jpg){.absolute bottom="50" left="0" width="400"}
+
+![](images/land2.jpg){.absolute bottom="50" right="0" width="400"}
+:::
+
+::: fragment
+![](images/land3.jpg){.absolute bottom="10" left="150" width="800"}
+:::
+
+## Restoration
+
+
+:::{.fragment .semi-fade-out}
+
+![](images/land4.jpg){.absolute top="100" left="0" width="500"}
+
+![](images/land5.jpg){.absolute bottom="0" right="0" width="400"}
+:::
+
+:::{.fragment .fade-in-then-out}
+![](images/land10.png){.absolute bottom="100" right="100" width="600"}
+:::
+
+:::{.fragment}
+
+
+![](images/land9.jpg){.absolute bottom="0" left="10" width="400"}
+
+
+![](images/land13.png){.absolute bottom="0" right="0" width="500"}
+
+![](images/land11.png){.absolute top="0" right="350" width="250"}
+:::
+
+
+## Restoration
+
+:::{.fragment .semi-fade-out}
+![](images/restored.jpg){.absolute top="100" left="0" width="450"}
+
+![](images/land8.png){.absolute bottom="0" right="0" width="450"}
 
 :::
-:::
 
+:::{.fragment}
+![](images/land7.png){.absolute bottom="30" left="200" width="700"}
+:::
 
 
 ## Summary
