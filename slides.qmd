@@ -11,51 +11,45 @@ title-slide-attributes:
   data-background-position: 2% 98%, center
 ---
 
-## So what? Indigenous burning 
+## So what? Indigenous burning
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="90%", fig.align='center'}
 knitr::include_graphics("images/tulowiecki_2024.png")
 ```
 
-
-
 ## So what? Resist, Adapt, Direct
 
 <br>
 
-"Despite striking global change, management to ensure healthy landscapes and sustained natural resources has tended to set objectives on the basis of the historical range of variability in stationary ecosystems."  *Magness et al. (Bioscience 2022)*
+"Despite striking global change, management to ensure healthy landscapes and sustained natural resources has tended to set objectives on the basis of the historical range of variability in stationary ecosystems." *Magness et al. (Bioscience 2022)*
 
-<br>
-<br>
+<br> <br>
 
-<div style="text-align: center;">
-  <h2>What is plausible?</h2>
-</div>
+::: {style="text-align: center;"}
+<h2>What is plausible?</h2>
+:::
 
-##
+## 
 
-::: columns
+::::: columns
 ::: {.column width="60%"}
-
 ![](images/conus_mfri.jpg)
 :::
 
 ::: {.column width="40%"}
-
 LANDFIRE datasets allow us to look at past and present
 
 <br>
 
 Biophysical Settings (BpS) models document "reference" conditions
-
 :::
-:::
+:::::
 
 <br>
 
-<div style="text-align: center;">
-  <h2>https://landfire.gov/</h2>
-</div>
+::: {style="text-align: center;"}
+<h2>https://landfire.gov/</h2>
+:::
 
 ## BPS to FRI
 
@@ -63,8 +57,7 @@ Biophysical Settings (BpS) models document "reference" conditions
 knitr::include_graphics("images/groupveg_fri.png")
 ```
 
-
-## Northeast United States  
+## Northeast United States
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
 knitr::include_graphics("images/overview.png")
@@ -76,19 +69,18 @@ knitr::include_graphics("images/overview.png")
 knitr::include_graphics("images/vermont.png")
 ```
 
-
 ## Upper Great Lakes
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
 knitr::include_graphics("images/michigan.png")
 ```
 
-
 ## Minnesota
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
 knitr::include_graphics("images/minnesota.png")
 ```
+
 ## Visualizing change
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="100%", fig.align='center'}
@@ -103,7 +95,7 @@ knitr::include_graphics("images/Historical.jpg")
 
 ## 
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width="70%"}
 library(ggplot2)
 library(readr)
 library(dplyr)
@@ -133,16 +125,12 @@ ggplot(bps1, aes(x=Percentage,y=SI_FRG, fill = as.factor(SI_FRG)))+
   labs(title = "Historical Distribution of Fire Adapted ecosystems")+
   ylab("")+
   scale_x_continuous(labels = label_comma())+
-<<<<<<< HEAD
   theme(legend.position = "none", title = element_text(size=15), 
-        axis.title.x = element_text(size = 10))
-=======
+        axis.title.x = element_text(size = 10))+
   theme_bw(base_size = 14)+
   theme(legend.position = "none", plot.title = element_text(size=16),
         plot.subtitle = element_text(size = 12)) 
   
-
->>>>>>> origin/main
 ```
 
 :::: fragment
@@ -182,15 +170,12 @@ ggplot(evt_frg1, aes(x=Percentage,y=Freq, fill = as.factor(Freq)))+
   labs(title = "Current Expected Fire Adapted Ecosystems", caption = "Derived From LANDFIRE EVT Data")+
   ylab("")+
   scale_x_continuous(labels = label_comma())+
-<<<<<<< HEAD
    theme(legend.position = "none", title = element_text(size=15), 
-        axis.title.x = element_text(size = 10))
-=======
+        axis.title.x = element_text(size = 10))+
   theme_bw(base_size = 14)+
   theme(legend.position = "none", 
         plot.title = element_text(size=16),
         plot.subtitle = element_text(size = 12)) 
->>>>>>> origin/main
 ```
 
 ## 
@@ -216,14 +201,11 @@ ggplot(evt_noag1, aes(x=Percentage,y=Freq, fill = as.factor(Freq)))+
   labs(title = "Current Expected Fire Adapted Ecosystems", subtitle = "Without Development", caption = "Derived From LANDFIRE EVT Data")+
   ylab("")+
   scale_x_continuous(labels = label_comma())+
-<<<<<<< HEAD
    theme(legend.position = "none", title = element_text(size=15), 
-        axis.title.x = element_text(size = 10))
-=======
+        axis.title.x = element_text(size = 10))+
   theme_bw(base_size = 14)+
   theme(legend.position = "none", plot.title = element_text(size=16),
         plot.subtitle = element_text(size = 12)) 
->>>>>>> origin/main
 ```
 
 ## 
@@ -268,16 +250,12 @@ ggplot(frg_chang, aes(
   ) +
   scale_color_manual(
     values = custom_colors) +
-<<<<<<< HEAD
   theme_bw(base_size = 12) +
   theme(legend.position = "none", title = element_text(size=15), 
-        axis.title.x = element_text(size = 10))
-
-=======
+        axis.title.x = element_text(size = 10))+
   theme_bw(base_size = 14) +
   theme(legend.position = "none", plot.title = element_text(size=22),
         plot.subtitle = element_text(size = 12)) 
->>>>>>> origin/main
 ```
 
 ## Why this shift matters
@@ -291,7 +269,7 @@ ggplot(frg_chang, aes(
 
 ## 
 
-<<<<<<< HEAD
+
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="100%", fig.align='center'}
 knitr::include_graphics("images/driftlesslayout.jpg")
 ```
@@ -324,13 +302,10 @@ knitr::include_graphics("images/driftlesstoday4.jpeg")
 
 ![](images/driftlesstoday4.jpeg){.absolute bottom="0" right="0" width="600" height="350"} ![](images/catlin2.jpg){.absolute top="60" left="0" width="600" height="350"}
 
-## How We Lost Fire: \~1800-1850
+## How We Lost Fire
 
 ::: {style="text-align: center;"}
-**Extirpation and Removal of Native People**
-=======
-![](images/mom_on_tractor.jpg)
->>>>>>> origin/main
+**1800s: Extirpation and Removal of Native People**
 :::
 
 ::: fragment
@@ -341,10 +316,10 @@ knitr::include_graphics("images/driftlesstoday4.jpeg")
 ![](images/One-horn.jpg){.absolute bottom="0" right="0" width="300" height="450"}
 :::
 
-## How We Lost Fire: Mid 1800s-1900
+## How We Lost Fire
 
 ::: {style="text-align: center;"}
-**Development and Agriculture**
+**1830s-1900 Development and Agriculture**
 :::
 
 ::: {.fragment .semi-fade-out}
@@ -355,10 +330,10 @@ knitr::include_graphics("images/driftlesstoday4.jpeg")
 ![](images/farming.jpg){.absolute bottom="0" left="0" width="600" height="350"} ![](images/farming2.jpg){.absolute top="200" right="0" wdith="600" height="350"}
 :::
 
-## How We Lost Fire: Early 1900s-Present
+## How We Lost Fire
 
 ::: {style="text-align: center;"}
-**Policy and Rhetoric**
+**1900s-Present: Policy and Rhetoric**
 :::
 
 ::: {.fragment .fade-out}
@@ -372,11 +347,11 @@ knitr::include_graphics("images/driftlesstoday4.jpeg")
 :::
 
 ::: fragment
-![](images/arrow.png){.absolute top="200" left="150" width="500" height="50"}
+![](images/arrow.png){.absolute top="200" left="150" width="400" height="50"}
 :::
 
 ::: fragment
-![](images/smokey1.jpg){.absolute top="100" right="100" width="250" height="400"}
+![](images/smokey1.jpg){.absolute top="150" right="100" width="250" height="400"}
 :::
 
 ::: fragment
@@ -417,57 +392,48 @@ from Nowacki and Abrams (2008)
 
 ## Restoration
 
-
-:::{.fragment .semi-fade-out}
-
+::: {.fragment .semi-fade-out}
 ![](images/land4.jpg){.absolute top="100" left="0" width="500"}
 
 ![](images/land5.jpg){.absolute bottom="0" right="0" width="400"}
 :::
 
-:::{.fragment .fade-in-then-out}
+::: {.fragment .fade-in-then-out}
 ![](images/land10.png){.absolute bottom="100" right="100" width="600"}
 :::
 
-:::{.fragment}
-
-
+::: fragment
 ![](images/land9.jpg){.absolute bottom="0" left="10" width="400"}
-
 
 ![](images/land13.png){.absolute bottom="0" right="0" width="500"}
 
 ![](images/land11.png){.absolute top="0" right="350" width="250"}
 :::
 
-
 ## Restoration
 
-:::{.fragment .semi-fade-out}
+::: {.fragment .semi-fade-out}
 ![](images/restored.jpg){.absolute top="100" left="0" width="450"}
 
 ![](images/land8.png){.absolute bottom="0" right="0" width="450"}
-
 :::
 
-:::{.fragment}
+::: fragment
 ![](images/land7.png){.absolute bottom="30" left="200" width="700"}
 :::
 
-
 ## Summary
 
-- We calculated 44M acres of fire per year historically in the northeastern United States
-- Fire adapted ecosystems have diminished on the landscape
-- LANDFIRE products can help understand change
+-   We calculated 44M acres of fire per year historically in the northeastern United States
+-   Fire adapted ecosystems have diminished on the landscape
+-   LANDFIRE products can help understand change
 
-<br>
-<br>
+<br> <br>
 
-<div style="text-align: center;">
-  <h4>Knowledge of historical ecosystems can lead to better management practices today 
+::: {style="text-align: center;"}
+<h4>
+
+Knowledge of historical ecosystems can lead to better management practices today
+
 </div>
-
-
-
-
+:::
