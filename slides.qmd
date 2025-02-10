@@ -11,7 +11,7 @@ title-slide-attributes:
   data-background-position: 2% 98%, center
 ---
 
-## So what-Indigenous burning 
+## So what? Indigenous burning 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="90%", fig.align='center'}
 knitr::include_graphics("images/tulowiecki_2024.png")
@@ -19,10 +19,13 @@ knitr::include_graphics("images/tulowiecki_2024.png")
 
 
 
-## So what-Resist, Adapt, Direct
+## So what? Resist, Adapt, Direct
+
+<br>
 
 "Despite striking global change, management to ensure healthy landscapes and sustained natural resources has tended to set objectives on the basis of the historical range of variability in stationary ecosystems."  *Magness et al. (Bioscience 2022)*
 
+<br>
 <br>
 
 <div style="text-align: center;">
@@ -43,7 +46,7 @@ LANDFIRE datasets allow us to look at past and present
 
 <br>
 
-Biophysical Settings models document "reference" conditions
+Biophysical Settings (BpS) models document "reference" conditions
 
 :::
 :::
@@ -130,8 +133,16 @@ ggplot(bps1, aes(x=Percentage,y=SI_FRG, fill = as.factor(SI_FRG)))+
   labs(title = "Historical Distribution of Fire Adapted ecosystems")+
   ylab("")+
   scale_x_continuous(labels = label_comma())+
+<<<<<<< HEAD
   theme(legend.position = "none", title = element_text(size=15), 
         axis.title.x = element_text(size = 10))
+=======
+  theme_bw(base_size = 14)+
+  theme(legend.position = "none", plot.title = element_text(size=16),
+        plot.subtitle = element_text(size = 12)) 
+  
+
+>>>>>>> origin/main
 ```
 
 :::: fragment
@@ -171,8 +182,15 @@ ggplot(evt_frg1, aes(x=Percentage,y=Freq, fill = as.factor(Freq)))+
   labs(title = "Current Expected Fire Adapted Ecosystems", caption = "Derived From LANDFIRE EVT Data")+
   ylab("")+
   scale_x_continuous(labels = label_comma())+
+<<<<<<< HEAD
    theme(legend.position = "none", title = element_text(size=15), 
         axis.title.x = element_text(size = 10))
+=======
+  theme_bw(base_size = 14)+
+  theme(legend.position = "none", 
+        plot.title = element_text(size=16),
+        plot.subtitle = element_text(size = 12)) 
+>>>>>>> origin/main
 ```
 
 ## 
@@ -198,8 +216,14 @@ ggplot(evt_noag1, aes(x=Percentage,y=Freq, fill = as.factor(Freq)))+
   labs(title = "Current Expected Fire Adapted Ecosystems", subtitle = "Without Development", caption = "Derived From LANDFIRE EVT Data")+
   ylab("")+
   scale_x_continuous(labels = label_comma())+
+<<<<<<< HEAD
    theme(legend.position = "none", title = element_text(size=15), 
         axis.title.x = element_text(size = 10))
+=======
+  theme_bw(base_size = 14)+
+  theme(legend.position = "none", plot.title = element_text(size=16),
+        plot.subtitle = element_text(size = 12)) 
+>>>>>>> origin/main
 ```
 
 ## 
@@ -231,6 +255,7 @@ frg_chang<-left_join(bps_frgpct,evt_frgpct, by="Freq")
 ggplot(frg_chang, aes(
     x = hist_percent, xend = cur_percent, 
     y = Freq,
+    yend = Freq,
     color = Freq)) +
   geom_segment(
     arrow = arrow(angle = 30, length = unit(0.5, 'cm')),
@@ -243,10 +268,16 @@ ggplot(frg_chang, aes(
   ) +
   scale_color_manual(
     values = custom_colors) +
+<<<<<<< HEAD
   theme_bw(base_size = 12) +
   theme(legend.position = "none", title = element_text(size=15), 
         axis.title.x = element_text(size = 10))
 
+=======
+  theme_bw(base_size = 14) +
+  theme(legend.position = "none", plot.title = element_text(size=22),
+        plot.subtitle = element_text(size = 12)) 
+>>>>>>> origin/main
 ```
 
 ## Why this shift matters
@@ -260,6 +291,7 @@ ggplot(frg_chang, aes(
 
 ## 
 
+<<<<<<< HEAD
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="100%", fig.align='center'}
 knitr::include_graphics("images/driftlesslayout.jpg")
 ```
@@ -296,6 +328,9 @@ knitr::include_graphics("images/driftlesstoday4.jpeg")
 
 ::: {style="text-align: center;"}
 **Extirpation and Removal of Native People**
+=======
+![](images/mom_on_tractor.jpg)
+>>>>>>> origin/main
 :::
 
 ::: fragment
@@ -422,18 +457,17 @@ from Nowacki and Abrams (2008)
 
 ## Summary
 
-- We calculated 44M acres of fire per year historically
+- We calculated 44M acres of fire per year historically in the northeastern United States
 - Fire adapted ecosystems have diminished on the landscape
+- LANDFIRE products can help understand change
 
+<br>
 <br>
 
 <div style="text-align: center;">
   <h4>Knowledge of historical ecosystems can lead to better management practices today 
 </div>
 
-<br>
-<br>
 
-![](images/banner_2021.jpg){width="120%"}
 
 
