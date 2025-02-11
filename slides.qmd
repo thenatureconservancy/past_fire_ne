@@ -309,13 +309,16 @@ knitr::include_graphics("images/driftlesstoday4.jpeg")
 :::
 
 ::: fragment
-![](images/hochunk.jpg){.absolute bottom="0" left="0" width="300" height="450"}
+![](images/harry-whitehorse.jpg){.absolute bottom="200" left="0" width="500"}
 
-![](images/Muck-a-tak-mish-o-kah-kaik.jpg){.absolute bottom="0" left="350" width="300" height="450"}
+![](images/Sauk.jpg){.absolute bottom="0" left="450" width="150"}
 
-![](images/One-horn.jpg){.absolute bottom="0" right="0" width="300" height="450"}
+![](images/Oscar-Howe.jpg){.absolute bottom="100" right="0" width="400"} 
 :::
 
+:::footer
+Artists: Harry Whitehorse(Ho-chunk) Oscar Howe(Dakota)
+:::
 ## How We Lost Fire
 
 ::: {style="text-align: center;"}
@@ -378,6 +381,14 @@ from Nowacki and Abrams (2008)
 ![](images/driftlesstoday4.jpeg){.absolute bottom="0" right="0" width="600" height="350"} ![](images/catlin2.jpg){.absolute top="60" left="0" width="600" height="350"}
 :::
 
+
+## Ecological Memory
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("images/ecomemory.png")
+```
+
+
 ## Restoration
 
 ::: {.fragment .semi-fade-out}
@@ -422,18 +433,22 @@ from Nowacki and Abrams (2008)
 ![](images/land7.png){.absolute bottom="30" left="200" width="700"}
 :::
 
-## Summary
+## Seventh and Eighth Fires
 
--   We calculated 44M acres of fire per year historically in the northeastern United States
--   Fire adapted ecosystems have diminished on the landscape
--   LANDFIRE products can help understand change
 
-<br> <br>
 
 ::: {style="text-align: center;"}
-<h4>
+
 
 Knowledge of historical ecosystems can lead to better management practices today
 
-</div>
+
+:::
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="65%", fig.align='center'}
+knitr::include_graphics("images/chioce.png")
+```
+
+::: footer
+Traditional Story from The Mishomis Book(Edward Benton-Banai) 
 :::
