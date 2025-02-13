@@ -394,7 +394,7 @@ Artists: Harry Whitehorse(Ho-chunk) Oscar Howe(Dakota)
 
 :::: {.fragment .fade-out}
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
-knitr::include_graphics("images/mesophication.PNG")
+knitr::include_graphics("images/mesophication.png")
 ```
 
 ::: footer
@@ -417,45 +417,45 @@ knitr::include_graphics("images/ecomemory.png")
 ## Restoration
 
 ::: {.fragment .semi-fade-out}
-![](images/land1.jpg){.absolute bottom="50" left="0" width="400"}
+![](images/land1.JPG){.absolute bottom="50" left="0" width="400"}
 
-![](images/land2.jpg){.absolute bottom="50" right="0" width="400"}
+![](images/land2.JPG){.absolute bottom="50" right="0" width="400"}
 :::
 
 ::: fragment
-![](images/land3.jpg){.absolute bottom="10" left="150" width="800"}
+![](images/land3.JPG){.absolute bottom="10" left="150" width="800"}
 :::
 
 ## Restoration
 
 ::: {.fragment .semi-fade-out}
-![](images/land4.jpg){.absolute top="100" left="0" width="500"}
+![](images/land4.JPG){.absolute top="100" left="0" width="500"}
 
-![](images/land5.jpg){.absolute bottom="0" right="0" width="400"}
+![](images/land5.JPG){.absolute bottom="0" right="0" width="400"}
 :::
 
 ::: {.fragment .fade-in-then-out}
-![](images/land10.png){.absolute bottom="100" right="100" width="600"}
+![](images/land10.PNG){.absolute bottom="100" right="100" width="600"}
 :::
 
 ::: fragment
-![](images/land9.jpg){.absolute bottom="0" left="10" width="400"}
+![](images/land9.JPG){.absolute bottom="0" left="10" width="400"}
 
-![](images/land13.png){.absolute bottom="0" right="0" width="500"}
+![](images/land13.PNG){.absolute bottom="0" right="0" width="500"}
 
-![](images/land11.png){.absolute top="0" right="350" width="250"}
+![](images/land11.PNG){.absolute top="0" right="350" width="250"}
 :::
 
 ## Restoration
 
 ::: {.fragment .semi-fade-out}
-![](images/restored.jpg){.absolute top="100" left="0" width="450"}
+![](images/restored.JPG){.absolute top="100" left="0" width="450"}
 
-![](images/land8.png){.absolute bottom="0" right="0" width="450"}
+![](images/land8.PNG){.absolute bottom="0" right="0" width="450"}
 :::
 
 ::: fragment
-![](images/land7.png){.absolute bottom="30" left="200" width="700"}
+![](images/land7.PNG){.absolute bottom="30" left="200" width="700"}
 :::
 
 ## Summary
@@ -466,7 +466,7 @@ knitr::include_graphics("images/ecomemory.png")
 
 ![](images/catlin2.jpg){.absolute bottom="80" left="20" width="450" height="300"}
 
-![](images/land7.png){.absolute bottom="80" right="20" width="450" height="300"}
+![](images/land7.PNG){.absolute bottom="80" right="20" width="450" height="300"}
 
 
 
