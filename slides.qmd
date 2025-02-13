@@ -81,9 +81,7 @@ knitr::include_graphics("images/michigan.png")
 knitr::include_graphics("images/minnesota.png")
 ```
 
-
 ## Visualizing change
-
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="100%", fig.align='center'}
 knitr::include_graphics("images/frequency.png")
@@ -260,17 +258,18 @@ ggplot(frg_chang, aes(
         plot.subtitle = element_text(size = 12)) 
 ```
 
-## Why this shift matters
+## Why This Shift Matters
 
+::: incremental
 -   This change has happened in recent history (\~150 years)
     -   faster than in last 1000
 -   Climate resiliency
     -   Preparing for a changing world
 -   Once these ecosystems are lost, often gone forever
 -   Pyrodiversity = Biodiversity
+:::
 
 ## 
-
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="100%", fig.align='center'}
 knitr::include_graphics("images/driftlesslayout.jpg")
@@ -281,13 +280,22 @@ knitr::include_graphics("images/driftlesslayout.jpg")
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
 knitr::include_graphics("images/catlin.jpg")
 ```
+::: {.footer}
 
+George Catlin *Madame Ferrebault's Prairie, above Prairie du Chien*
+
+:::
 ## 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
 knitr::include_graphics("images/catlin2.jpg")
 ```
 
+:::{.footer}
+
+George Catlin *Beautiful Prairie Bluffs,Upper Mississippi(1835)*
+
+:::
 ## 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
@@ -311,20 +319,18 @@ knitr::include_graphics("images/driftlesstoday4.jpeg")
 :::
 
 ::: fragment
+![](images/harry-whitehorse.jpg){.absolute bottom="250" left="0" width="500"}
 
-![](images/harry-whitehorse.jpg){.absolute bottom="200" left="0" width="500"}
 
+![](images/Muck-a-tak-mish-o-kah-kaik.jpg){.absolute bottom="0" left="450" width="250"}
 
-![](images/harry-whitehorse.jpg){.absolute bottom="200" left="0" width="500"}
-
-![](images/Muck-a-tak-mish-o-kah-kaik.jpg){.absolute bottom="0" left="450" width="150"}
-
-![](images/Oscar-Howe.jpg){.absolute bottom="100" right="0" width="400"} 
+![](images/Oscar-Howe.jpg){.absolute bottom="250" right="0" width="400"}
 :::
 
-:::footer
-Artists: Harry Whitehorse(Ho-chunk) Oscar Howe(Dakota)
+::: footer
+Harry Whitehorse(Ho-chunk) Oscar Howe(Dakota) George Catlin
 :::
+
 ## How We Lost Fire
 
 ::: {style="text-align: center;"}
@@ -360,7 +366,10 @@ Artists: Harry Whitehorse(Ho-chunk) Oscar Howe(Dakota)
 :::
 
 ::: fragment
-![](images/smokey1.jpg){.absolute top="150" right="100" width="250" height="400"}
+![](images/smokey1.jpg){.absolute top="150" right="200" width="230" height="400"}
+
+![](images/smokey.png){.absolute top="150" right="0" width="200"}
+
 :::
 
 ::: fragment
@@ -385,138 +394,17 @@ from Nowacki and Abrams (2008)
 
 ::: fragment
 ![](images/driftlesstoday4.jpeg){.absolute bottom="0" right="0" width="600" height="350"} ![](images/catlin2.jpg){.absolute top="60" left="0" width="600" height="350"}
-
-
 :::
 
-:::footer
+::: footer
 Artists: Harry Whitehorse(Ho-chunk) Oscar Howe(Dakota)
 :::
-## How We Lost Fire
-
-
-## Ecological Memory
-
-::: {style="text-align: center;"}
-**1830s-1900 Development and Agriculture**
-:::
-
-::: {.fragment .semi-fade-out}
-![](images/mining.jpg){.absolute top="150" left="0" wdith="800" height="400"} ![](images/mining2.jpg){.absolute top="300" right="0" wdith="800" height="400"}
-:::
-
-::: fragment
-![](images/farming.jpg){.absolute bottom="0" left="0" width="600" height="350"} ![](images/farming2.jpg){.absolute top="200" right="0" wdith="600" height="350"}
-:::
-
-## How We Lost Fire
-
-::: {style="text-align: center;"}
-**1900s-Present: Policy and Rhetoric**
-:::
-
-::: {.fragment .fade-out}
--   Timber Protection Act of 1922
--   Clarke-Mcnary Act of 1924
--   10am Policy of 1935
-:::
-
-::: fragment
-![](images/Easternburned.png){.absolute top="150" left="0" wdith="800" height="400"}
-:::
-
-::: fragment
-![](images/arrow.png){.absolute top="200" left="150" width="400" height="50"}
-:::
-
-::: fragment
-![](images/smokey1.jpg){.absolute top="150" right="100" width="250" height="400"}
-:::
-
-::: fragment
-![](images/fireprevention.jpg){.absolute bottom="0" right="0" width="250" height="400"}
-:::
-
-::: fragment
-![](images/fsmessage.png){.absolute bottom="0" left="0"}
-:::
-
-## Ecological Result
-
-:::: {.fragment .fade-out}
-```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
-knitr::include_graphics("images/mesophication.PNG")
-```
-
-::: footer
-from Nowacki and Abrams (2008)
-:::
-::::
-
-::: fragment
-![](images/driftlesstoday4.jpeg){.absolute bottom="0" right="0" width="600" height="350"} ![](images/catlin2.jpg){.absolute top="60" left="0" width="600" height="350"}
-:::
-
 
 ## Ecological Memory
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
 knitr::include_graphics("images/ecomemory.png")
 ```
-
-
-## Restoration
-
-::: {.fragment .semi-fade-out}
-![](images/land1.jpg){.absolute bottom="50" left="0" width="400"}
-
-![](images/land2.jpg){.absolute bottom="50" right="0" width="400"}
-:::
-
-::: fragment
-![](images/land3.jpg){.absolute bottom="10" left="150" width="800"}
-:::
-
-## Restoration
-
-::: {.fragment .semi-fade-out}
-![](images/land4.jpg){.absolute top="100" left="0" width="500"}
-
-![](images/land5.jpg){.absolute bottom="0" right="0" width="400"}
-:::
-
-::: {.fragment .fade-in-then-out}
-![](images/land10.png){.absolute bottom="100" right="100" width="600"}
-:::
-
-::: fragment
-![](images/land9.jpg){.absolute bottom="0" left="10" width="400"}
-
-![](images/land13.png){.absolute bottom="0" right="0" width="500"}
-
-![](images/land11.png){.absolute top="0" right="350" width="250"}
-:::
-
-## Restoration
-
-::: {.fragment .semi-fade-out}
-![](images/restored.jpg){.absolute top="100" left="0" width="450"}
-
-![](images/land8.png){.absolute bottom="0" right="0" width="450"}
-:::
-
-::: fragment
-![](images/land7.png){.absolute bottom="30" left="200" width="700"}
-:::
-
-
-## Seventh and Eighth Fires
-
-
-```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
-knitr::include_graphics("images/ecomemory.png")
-```
-
 
 ## Restoration
 
@@ -564,17 +452,15 @@ knitr::include_graphics("images/ecomemory.png")
 
 ## Summary
 
-
 ::: {style="text-align: center;"}
-
-
-Knowledge of historical ecosystems can lead to better management practices today
-
-
+"If we want to be champions of restoration, biodiversity, and resilient landscapes, we have to retrain our eyes and our minds to see the landscape not how it is, but how it was and might be again"
 :::
 
+![](images/catlin2.jpg){.absolute bottom="80" left="20" width="450" height="300"}
 
-Knowledge of historical ecosystems can lead to better management practices today
+![](images/land7.png){.absolute bottom="80" right="20" width="450" height="300"}
 
 
-
+:::footer
+*(Evan Larson, Personal Communication 2025)*
+:::
