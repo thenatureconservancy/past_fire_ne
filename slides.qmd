@@ -81,7 +81,7 @@ knitr::include_graphics("images/michigan.png")
 knitr::include_graphics("images/minnesota.png")
 ```
 
-## Visualizing change
+## Visualizing Change
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="100%", fig.align='center'}
 knitr::include_graphics("images/frequency.png")
