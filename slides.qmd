@@ -310,7 +310,7 @@ knitr::include_graphics("images/driftlesstoday4.jpeg")
 
 ## What Happened?
 
-![](images/driftlesstoday4.jpeg){.absolute bottom="0" right="0" width="600" height="350"} ![](images/catlin2.jpg){.absolute top="60" left="0" width="600" height="350"}
+![](images/driftlesstoday4.jpeg){.absolute bottom="0" right="0" width="600" height="350"} ![](images/catlin2.jpg){.absolute top="70" left="0" width="600" height="350"}
 
 ## How We Lost Fire
 
