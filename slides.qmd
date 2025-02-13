@@ -319,10 +319,9 @@ knitr::include_graphics("images/driftlesstoday4.jpeg")
 **1800s: Extirpation and Removal of Native People**
 :::
 
-::: fragment
 
 ![](images/harry-whitehorse.jpg){.absolute bottom="250" left="0" width="500"}
-=======
+
 
 ![](images/harry-whitehorse.jpg){.absolute bottom="200" left="0" width="500"}
 
@@ -334,6 +333,8 @@ knitr::include_graphics("images/driftlesstoday4.jpeg")
 :::footer
 Artists: Harry Whitehorse(Ho-chunk) Oscar Howe(Dakota)
 :::
+
+
 ## How We Lost Fire
 
 ::: {style="text-align: center;"}
@@ -350,8 +351,7 @@ Artists: Harry Whitehorse(Ho-chunk) Oscar Howe(Dakota)
 ::: footer
 
 Harry Whitehorse(Ho-chunk) Oscar Howe(Dakota) George Catlin
-=======
-from Nowacki and Abrams (2008)
+
 :::
 ::::
 
@@ -514,8 +514,6 @@ knitr::include_graphics("images/ecomemory.png")
 :::footer
 *(Evan Larson, Personal Communication 2025)*
 :::
-=======
-</div>
-:::
+
 
 
