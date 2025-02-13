@@ -94,7 +94,8 @@ knitr::include_graphics("images/focustroll.png")
 knitr::include_graphics("images/focusyoop.png")
 ```
 
-## Visualizing change
+
+## Visualizing Change
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="100%", fig.align='center'}
 knitr::include_graphics("images/frequency.png")
@@ -271,17 +272,18 @@ ggplot(frg_chang, aes(
         plot.subtitle = element_text(size = 12)) 
 ```
 
-## Why this shift matters
+## Why This Shift Matters
 
+::: incremental
 -   This change has happened in recent history (\~150 years)
     -   faster than in last 1000
 -   Climate resiliency
     -   Preparing for a changing world
 -   Once these ecosystems are lost, often gone forever
 -   Pyrodiversity = Biodiversity
+:::
 
 ## 
-
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="100%", fig.align='center'}
 knitr::include_graphics("images/driftlesslayout.jpg")
@@ -292,13 +294,22 @@ knitr::include_graphics("images/driftlesslayout.jpg")
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
 knitr::include_graphics("images/catlin.jpg")
 ```
+::: {.footer}
 
+George Catlin *Madame Ferrebault's Prairie, above Prairie du Chien*
+
+:::
 ## 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
 knitr::include_graphics("images/catlin2.jpg")
 ```
 
+:::{.footer}
+
+George Catlin *Beautiful Prairie Bluffs,Upper Mississippi(1835)*
+
+:::
 ## 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
@@ -313,7 +324,7 @@ knitr::include_graphics("images/driftlesstoday4.jpeg")
 
 ## What Happened?
 
-![](images/driftlesstoday4.jpeg){.absolute bottom="0" right="0" width="600" height="350"} ![](images/catlin2.jpg){.absolute top="60" left="0" width="600" height="350"}
+![](images/driftlesstoday4.jpeg){.absolute bottom="0" right="0" width="600" height="350"} ![](images/catlin2.jpg){.absolute top="70" left="0" width="600" height="350"}
 
 ## How We Lost Fire
 
@@ -321,15 +332,61 @@ knitr::include_graphics("images/driftlesstoday4.jpeg")
 **1800s: Extirpation and Removal of Native People**
 :::
 
+
+![](images/harry-whitehorse.jpg){.absolute bottom="250" left="0" width="500"}
+
+
+![](images/harry-whitehorse.jpg){.absolute bottom="200" left="0" width="500"}
+
+![](images/Sauk.jpg){.absolute bottom="0" left="450" width="150"}
+
+![](images/Oscar-Howe.jpg){.absolute bottom="100" right="0" width="400"} 
+:::
+
+:::footer
+Artists: Harry Whitehorse(Ho-chunk) Oscar Howe(Dakota)
+:::
+
+
+## How We Lost Fire
+
+::: {style="text-align: center;"}
+**1830s-1900 Development and Agriculture**
+:::
+
+
+
+![](images/Muck-a-tak-mish-o-kah-kaik.jpg){.absolute bottom="0" left="450" width="250"}
+
+![](images/Oscar-Howe.jpg){.absolute bottom="250" right="0" width="400"}
+:::
+
+::: footer
+
+Harry Whitehorse(Ho-chunk) Oscar Howe(Dakota) George Catlin
+
+:::
+::::
+
 ::: fragment
+![](images/driftlesstoday4.jpeg){.absolute bottom="0" right="0" width="600" height="350"} ![](images/catlin2.jpg){.absolute top="60" left="0" width="600" height="350"}
+=======
 ![](images/hochunk.jpg){.absolute bottom="0" left="0" width="300" height="450"}
 
 ![](images/Muck-a-tak-mish-o-kah-kaik.jpg){.absolute bottom="0" left="350" width="300" height="450"}
 
 ![](images/One-horn.jpg){.absolute bottom="0" right="0" width="300" height="450"}
+
+
 :::
 
 ## How We Lost Fire
+
+
+=======
+
+## Ecological Memory
+=======
 
 ::: {style="text-align: center;"}
 **1830s-1900 Development and Agriculture**
@@ -364,7 +421,10 @@ knitr::include_graphics("images/driftlesstoday4.jpeg")
 :::
 
 ::: fragment
-![](images/smokey1.jpg){.absolute top="150" right="100" width="250" height="400"}
+![](images/smokey1.jpg){.absolute top="150" right="200" width="230" height="400"}
+
+![](images/smokey.png){.absolute top="150" right="0" width="200"}
+
 :::
 
 ::: fragment
@@ -390,6 +450,23 @@ from Nowacki and Abrams (2008)
 ::: fragment
 ![](images/driftlesstoday4.jpeg){.absolute bottom="0" right="0" width="600" height="350"} ![](images/catlin2.jpg){.absolute top="60" left="0" width="600" height="350"}
 :::
+
+::: footer
+Artists: Harry Whitehorse(Ho-chunk) Oscar Howe(Dakota)
+:::
+
+
+## Ecological Memory
+
+::: fragment
+![](images/land7.png){.absolute bottom="30" left="200" width="700"}
+:::
+
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("images/ecomemory.png")
+```
 
 ## Restoration
 
@@ -437,16 +514,19 @@ from Nowacki and Abrams (2008)
 
 ## Summary
 
--   We calculated 44M acres of fire per year historically in the northeastern United States
--   Fire adapted ecosystems have diminished on the landscape
--   LANDFIRE products can help understand change
-
-<br> <br>
-
 ::: {style="text-align: center;"}
-<h4>
-
-Knowledge of historical ecosystems can lead to better management practices today
-
-</div>
+"If we want to be champions of restoration, biodiversity, and resilient landscapes, we have to retrain our eyes and our minds to see the landscape not how it is, but how it was and might be again"
 :::
+
+![](images/catlin2.jpg){.absolute bottom="80" left="20" width="450" height="300"}
+
+![](images/land7.png){.absolute bottom="80" right="20" width="450" height="300"}
+
+
+
+:::footer
+*(Evan Larson, Personal Communication 2025)*
+:::
+
+
+
