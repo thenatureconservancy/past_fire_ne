@@ -394,7 +394,7 @@ Artists: Harry Whitehorse(Ho-chunk) Oscar Howe(Dakota)
 
 :::: {.fragment .fade-out}
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
-knitr::include_graphics("images/mesophication.png")
+knitr::include_graphics("images/mesophication.PNG")
 ```
 
 ::: footer
