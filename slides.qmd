@@ -311,7 +311,7 @@ knitr::include_graphics("images/driftlesstoday4.jpeg")
 ::: fragment
 ![](images/harry-whitehorse.jpg){.absolute bottom="200" left="0" width="500"}
 
-![](images/Sauk.jpg){.absolute bottom="0" left="450" width="150"}
+![](images/Muck-a-tak-mish-o-kah-kaik.jpg){.absolute bottom="0" left="450" width="150"}
 
 ![](images/Oscar-Howe.jpg){.absolute bottom="100" right="0" width="400"} 
 :::
