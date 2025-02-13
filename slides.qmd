@@ -81,11 +81,10 @@ knitr::include_graphics("images/michigan.png")
 knitr::include_graphics("images/minnesota.png")
 ```
 
-<<<<<<< HEAD
-## Visualizing Change
-=======
+
+
 ## Visualizing change
->>>>>>> dc186c968f4ad8a3158731db7d0695497466ff78
+
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="100%", fig.align='center'}
 knitr::include_graphics("images/frequency.png")
@@ -313,7 +312,7 @@ knitr::include_graphics("images/driftlesstoday4.jpeg")
 :::
 
 ::: fragment
-<<<<<<< HEAD
+
 ![](images/harry-whitehorse.jpg){.absolute bottom="200" left="0" width="500"}
 
 ![](images/Sauk.jpg){.absolute bottom="0" left="450" width="150"}
@@ -390,12 +389,12 @@ from Nowacki and Abrams (2008)
 ![](images/Muck-a-tak-mish-o-kah-kaik.jpg){.absolute bottom="0" left="350" width="300" height="450"}
 
 ![](images/One-horn.jpg){.absolute bottom="0" right="0" width="300" height="450"}
->>>>>>> dc186c968f4ad8a3158731db7d0695497466ff78
+
 :::
 
 ## How We Lost Fire
 
-<<<<<<< HEAD
+
 ## Ecological Memory
 =======
 ::: {style="text-align: center;"}
@@ -501,13 +500,13 @@ from Nowacki and Abrams (2008)
 ::: fragment
 ![](images/land7.png){.absolute bottom="30" left="200" width="700"}
 :::
->>>>>>> dc186c968f4ad8a3158731db7d0695497466ff78
+
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
 knitr::include_graphics("images/ecomemory.png")
 ```
 
-<<<<<<< HEAD
+
 
 ## Restoration
 
@@ -586,4 +585,4 @@ Knowledge of historical ecosystems can lead to better management practices today
 
 </div>
 :::
->>>>>>> dc186c968f4ad8a3158731db7d0695497466ff78
+
