@@ -368,7 +368,7 @@ Artists: Harry Whitehorse(Ho-chunk) Oscar Howe(Dakota)
 :::
 
 ::: fragment
-![](./images/Easternburned.png){.absolute top="150" left="0" wdith="800" height="400"}
+![](images/Easternburned.PNG){.absolute top="150" left="0" wdith="800" height="400"}
 :::
 
 ::: fragment
@@ -387,7 +387,7 @@ Artists: Harry Whitehorse(Ho-chunk) Oscar Howe(Dakota)
 :::
 
 ::: fragment
-![](images/fsmessage.png){.absolute bottom="0" left="0"}
+![](images/fsmessage.PNG){.absolute bottom="0" left="0"}
 :::
 
 ## Ecological Result
