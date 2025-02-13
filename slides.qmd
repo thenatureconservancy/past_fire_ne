@@ -17,38 +17,51 @@ title-slide-attributes:
 knitr::include_graphics("images/tulowiecki_2024.png")
 ```
 
-## So what? Resist, Adapt, Direct
+## 
+
+<br>
+
+::: {style="text-align: center;"}
+<h2>What is LANDFIRE?</h2>
+:::
 
 <br>
 
 "Despite striking global change, management to ensure healthy landscapes and sustained natural resources has tended to set objectives on the basis of the historical range of variability in stationary ecosystems." *Magness et al. (Bioscience 2022)*
 
-<br> <br>
-
-::: {style="text-align: center;"}
-<h2>What is plausible?</h2>
-:::
+<br>
 
 ## 
 
 ::::: columns
-::: {.column width="60%"}
+::: {.column width="55%"}
 ![](images/conus_mfri.jpg)
 :::
 
-::: {.column width="40%"}
-LANDFIRE datasets allow us to look at past and present
+::: {.column width="45%"}
 
-<br>
+LANDFIRE datasets
 
-Biophysical Settings (BpS) models document "reference" conditions
+- Current
+
+    -   Vegetation, fuels, fire regimes
+    
+- Historic
+
+    -   Biophysical settings, fire return interval
+
 :::
 :::::
 
-<br>
-
 ::: {style="text-align: center;"}
-<h2>https://landfire.gov/</h2>
+
+<br>
+Biophysical Settings (BpS) models document "reference" conditions
+
+:::
+
+:::footer
+landfire.gov
 :::
 
 ## BPS to FRI
@@ -57,28 +70,28 @@ Biophysical Settings (BpS) models document "reference" conditions
 knitr::include_graphics("images/groupveg_fri.png")
 ```
 
-## Northeast United States
+## 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
 knitr::include_graphics("images/overview.png")
 ```
 
-## Vermont
+## 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
-knitr::include_graphics("images/vermont.png")
+knitr::include_graphics("images/focuswi.png")
 ```
 
-## Upper Great Lakes
+## 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
-knitr::include_graphics("images/michigan.png")
+knitr::include_graphics("images/focustroll.png")
 ```
 
-## Minnesota
+## 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
-knitr::include_graphics("images/minnesota.png")
+knitr::include_graphics("images/focusyoop.png")
 ```
 
 
