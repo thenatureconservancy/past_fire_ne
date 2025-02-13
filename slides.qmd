@@ -368,7 +368,7 @@ Artists: Harry Whitehorse(Ho-chunk) Oscar Howe(Dakota)
 :::
 
 ::: fragment
-![](images/Easternburned.png){.absolute top="150" left="0" wdith="800" height="400"}
+![](./images/Easternburned.png){.absolute top="150" left="0" wdith="800" height="400"}
 :::
 
 ::: fragment
