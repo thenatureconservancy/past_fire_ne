@@ -164,11 +164,12 @@ custom_colors <- c("Frequent" = "orange", "Rare" = "skyblue2", "Intermediate" = 
 ggplot(bps_mn1, aes(x=Percentage,y=SI_FRG, fill = as.factor(SI_FRG)))+
   geom_bar(stat= "identity")+
   scale_fill_manual(values = custom_colors)+
-  labs(title = "Historical Fire Frequency", subtitle = "Percent of Landscape in Each Frequency Group",caption = "Derived From LANDFIRE BpS Data")+
+  labs(title = "Historical Percent of Minnesota in Each Frequency Group", 
+       caption = "Derived From LANDFIRE BpS Data")+
   ylab("")+
   scale_x_continuous(labels = label_comma())+
   theme_bw()+
-  theme(legend.position = "none", plot.title = element_text(size=22),
+  theme(legend.position = "none", plot.title = element_text(size=16),
         plot.subtitle = element_text(size = 12)) 
   
 
@@ -194,12 +195,13 @@ custom_colors <- c("Frequent" = "orange", "Rare" = "skyblue2", "Intermediate" = 
 ggplot(evt_mn1, aes(x=Percentage,y=Freq, fill = as.factor(Freq)))+
   geom_bar(stat= "identity")+
   scale_fill_manual(values = custom_colors)+
-  labs(title = "Current Expected Fire Frequency",subtitle = "Expected Percent of Landscape in Each Frequency Group", caption = "Derived From LANDFIRE EVT Data")+
-  ylab("")+
+  labs(title = "Current Percent of Minnesota in Each Frequency Group",
+       caption = "Derived From LANDFIRE EVT Data")+
+  ylab("") +
   scale_x_continuous(labels = label_comma())+
   theme_bw()+
   theme(legend.position = "none", 
-        plot.title = element_text(size=22),
+        plot.title = element_text(size=16),
         plot.subtitle = element_text(size = 12)) 
 ```
 
@@ -222,15 +224,16 @@ custom_colors <- c("Frequent" = "orange", "Rare" = "skyblue2", "Intermediate" = 
 ggplot(evt_noag, aes(x=Percentage,y=Freq, fill = as.factor(Freq)))+
   geom_bar(stat= "identity")+
   scale_fill_manual(values = custom_colors)+
-  labs(title = "Current Expected Fire Frequency",subtitle = "Expected When Removing Development and Agriculture", caption = "Derived From LANDFIRE EVT Data")+
+  labs(title = "Current Expected Fire Frequency with Developed and Agricultural Areas Removed",
+       caption = "Derived From LANDFIRE EVT Data")+
   ylab("")+
   scale_x_continuous(labels = label_comma())+
   theme_bw()+
-  theme(legend.position = "none", plot.title = element_text(size=22),
+  theme(legend.position = "none", plot.title = element_text(size=16),
         plot.subtitle = element_text(size = 12)) 
 ```
 
-## The change
+## The Change
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center'}
 ##Showing change
 
@@ -277,17 +280,40 @@ ggplot(frg_chang, aes(
         plot.subtitle = element_text(size = 12)) 
 ```
 
-## What Happened? and why does this matter?
+## Why does this matter?
 
-- Fire Suppression
-- Mesophication (forests becoming more moist)
+
+::: columns
+::: {.column width="50%"}
+
+![](images/conus_mfri.jpg)
+:::
+
+::: {.column width="50%"}
+
+- Mesophication 
 - Ecosystem resiliency
 - Biodiversity
 
+:::
+:::
 
-## Change in Fire- Summary
 
-- Most of Minnesota used to burn frequently
-- Now it doesn't but...
-    - The need for frequent fire still exists  
-- Able to visualize these trends using this method
+
+## Summary
+
+- We calculated 44M acres of fire per year historically
+- Fire adapted ecosystems have diminished on the landscape
+
+<br>
+
+<div style="text-align: center;">
+  <h4>Knowledge of historical ecosystems can lead to better management practices today 
+</div>
+
+<br>
+<br>
+
+![](images/banner_2021.jpg){width="120%"}
+
+
